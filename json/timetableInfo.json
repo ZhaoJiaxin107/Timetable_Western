@@ -1,0 +1,216 @@
+{
+    "Component":[
+       {
+          "Component_id":"All",
+          "Component_value":"All"
+       },
+       {
+          "Component_id":"LEC",
+          "Component_value":"Lecture"
+       },
+       {
+          "Component_id":"TUT",
+          "Component_value":"Tutorial"
+       },
+       {
+          "Component_id":"LAB",
+          "Component_value":"Laboratory"
+       }
+    ],
+    "Campus":[
+       {
+          "Campus_id":"Any",
+          "Campus_value":"Any"
+       },
+       {
+          "Campus_id":"KC",
+          "Campus_value":"King's"
+       },
+       {
+          "Campus_id":"HC",
+          "Campus_value":"Huron"
+       },
+       {
+          "Campus_id":"UWO",
+          "Campus_value":"Main"
+       },
+       {
+          "Campus_id":"BR",
+          "Campus_value":"Brescia"
+       }
+    ],
+    "CourseType":[
+       {
+          "CourseType_id":"All",
+          "CourseType_value":"All"
+       },
+       {
+          "CourseType_id":"inPerson",
+          "CourseType_value":"In Person"
+       },
+       {
+        "CourseType_id":"Blended",
+        "CourseType_value":"Blended"
+     },
+     {
+        "CourseType_id":"Distance",
+        "CourseType_value":"Distance Studies/Online"
+     }
+    ],
+    "Designation":[
+       {
+          "Designation_id":"Any",
+          "Designation_value":"Any (any suffix)"
+       },
+       {
+          "Designation_id":"Full",
+          "Designation_value":"Full Course Not Designated As An Essay Course (no suffix)"
+       },
+       {
+        "Designation_id":"E",
+        "Designation_value":"Essay Full Course (E)"
+     },
+     {
+        "Designation_id":"A",
+        "Designation_value":"First Term Half-Course (A)"
+     },
+     {
+        "Designation_id":"B",
+        "Designation_value":"Second Term Half-Course (B)"
+     },
+     {
+        "Designation_id":"F",
+        "Designation_value":"First Term Essay Half-Course (F)"
+     },
+     {
+        "Designation_id":"G",
+        "Designation_value":"Second Term Essay Half-Course (G)"
+     },
+     {
+        "Designation_id":"Q",
+        "Designation_value":"First Term First Quarter Course (Q)"
+     },
+     {
+        "Designation_id":"R",
+        "Designation_value":"First Term Second Quarter Course (R)"
+     },
+     {
+        "Designation_id":"S",
+        "Designation_value":"Second Term First Quarter Course (S)"
+     },
+     {
+        "Designation_id":"T",
+        "Designation_value":"Second Term Second Quarter Course (T)"
+     },
+     {
+        "Designation_id":"W",
+        "Designation_value":"First Term Full Course (full course offered in one term) (W)"
+     },
+     {
+        "Designation_id":"X",
+        "Designation_value":"Second Term Full Course (full course offered in one term)  (X)"
+     },
+     {
+        "Designation_id":"Y",
+        "Designation_value":"Half-Course Offered In Other Than A Regular Session (Y)"
+     },
+     {
+        "Designation_id":"Z",
+        "Designation_value":"Essay Half-Course Offered In Other Than A Regular Session (Z)"
+     }
+    ],
+    "subject":[
+       {
+          "subject_id":"ACTURSCI",
+          "subject_value":"Actuarial Science"
+       },
+       {
+          "subject_id":"AMERICAN",
+          "subject_value":"American Studies"
+       },
+       {
+        "subject_id":"ANATCELL",
+        "subject_value":" Anatomy and Cell Biology "
+     },
+     {
+        "subject_id":"ANTHRO",
+        "subject_value":" Anthropology "
+     },
+     {
+        "subject_id":"APPLMATH",
+        "subject_value":" Applied Mathematics "
+     },
+     {
+        "subject_id":"ARABIC",
+        "subject_value":" Arabic "
+     },
+     {
+        "subject_id":"AH",
+        "subject_value":" Arts and Humanities "
+     },
+     {
+        "subject_id":"ASTRONOM",
+        "subject_value":" Astronomy "
+     },
+     {
+        "subject_id":"BIBLSTUD",
+        "subject_value":" Biblical Studies "
+     },
+     {
+        "subject_id":"BIOCHEM",
+        "subject_value":" Biochemistry "
+     },
+     {
+        "subject_id":"BIOLOGY",
+        "subject_value":" Biology "
+     },
+     {
+        "subject_id":"BME",
+        "subject_value":" Biomedical Engineering "
+     },
+     {
+        "subject_id":"ACTURSCI",
+        "subject_value":"Actuarial Science"
+     },
+     {
+        "subject_id":"AMERICAN",
+        "subject_value":"American Studies"
+     },
+     {
+        "subject_id":"ACTURSCI",
+        "subject_value":"Actuarial Science"
+     },
+     {
+        "subject_id":"AMERICAN",
+        "subject_value":"American Studies"
+     },
+     {
+        "subject_id":"ACTURSCI",
+        "subject_value":"Actuarial Science"
+     },
+     {
+        "subject_id":"AMERICAN",
+        "subject_value":"American Studies"
+     },
+     {
+        "subject_id":"ACTURSCI",
+        "subject_value":"Actuarial Science"
+     },
+     {
+        "subject_id":"AMERICAN",
+        "subject_value":"American Studies"
+     },
+     {
+        "subject_id":"ACTURSCI",
+        "subject_value":"Actuarial Science"
+     },
+     {
+        "subject_id":"AMERICAN",
+        "subject_value":"American Studies"
+     }
+    ],
+    "day": ["m", "tu", "w", "th", "f"],
+    "start_time":["8:00 am", "8:30 am", "9:00 am", "9:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 pm", "12:30 pm", "1:00 pm", "1:30 pm", "2:00 pm", "2:30 pm", "3:00 pm", "3:30 pm", "4:00 pm", "4:30 pm", "5:00 pm", "5:30 pm", "6:00 pm", "6:30 pm", "7:00 pm" ],
+    "end_time": ["9:00 am", "9:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 pm", "12:30 pm", "1:00 pm", "1:30 pm", "2:00 pm", "2:30 pm", "3:00 pm", "3:30 pm", "4:00 pm", "4:30 pm", "5:00 pm", "5:30 pm", "6:00 pm", "6:30 pm", "7:00 pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm", "9:30pm", "10:00pm" ],
+    "status": false
+ }
