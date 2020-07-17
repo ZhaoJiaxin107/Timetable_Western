@@ -213,7 +213,7 @@
         "subject_value":"Church History"
      },
      {
-        "subject_id":"CHURCH",
+        "subject_id":"CHURLAW",
         "subject_value":"Church Law"
      },
      {
@@ -229,7 +229,7 @@
         "subject_value":"Classical Studies"
      },
      {
-        "subject_id":"CPE",
+        "subject_id":"CMBPROG",
         "subject_value":"Combined Program Enrollment"
      },
      {
@@ -273,7 +273,7 @@
         "subject_value":"Economics"
      },
      {
-        "subject_id":"",
+        "subject_id":"EELC",
         "subject_value":"Education English Language Cen"
      },
      {
@@ -333,7 +333,7 @@
         "subject_value":"Geography"
      },
      {
-        "subject_id":"",
+        "subject_id":"GEOLOGY",
         "subject_value":"Geology"
      },
      {
@@ -365,7 +365,7 @@
         "subject_value":"Hebrew"
      },
      {
-        "subject_id":"HISTTHE",
+        "subject_id":"HISTTHEO",
         "subject_value":"Historical Thelogy"
      },
      {
@@ -421,7 +421,7 @@
         "subject_value":"Jewish Studies"
      },
      {
-        "subject_id":"",
+        "subject_id":"MTP-BRJR",
         "subject_value":"Journalism-Broadcasting Fanshw"
      },
      {
@@ -445,7 +445,7 @@
         "subject_value":"Linguistics"
      },
      {
-        "subject_id":"",
+        "subject_id":"LITURST",
         "subject_value":"Liturgical Studies"
      },
      {
@@ -497,11 +497,11 @@
         "subject_value":"Microbiology & Immunology"
      },
      {
-        "subject_id":"",
+        "subject_id":"MORALTHE",
         "subject_value":"Moral Theology"
      },
      {
-        "subject_id":"",
+        "subject_id":"MTP-MMED",
         "subject_value":"Multimed Dsgn & Prod Fanshawe"
      },
      {
@@ -541,7 +541,7 @@
         "subject_value":"Pharmacology"
      },
      {
-        "subject_id":"",
+        "subject_id":"PHILST",
         "subject_value":"Philosophical Studies"
      },
      {
@@ -585,7 +585,7 @@
         "subject_value":"Religious Studies"
      },
      {
-        "subject_id":"",
+        "subject_id":"SACRTHEO",
         "subject_value":"Sacramental Theology"
      },
      {
@@ -625,7 +625,7 @@
         "subject_value":"Speech"
      },
      {
-        "subject_id":"",
+        "subject_id":"SPIRTHEO",
         "subject_value":"Spiritual Theology"
      },
      {
@@ -657,7 +657,7 @@
         "subject_value":"Theological Studies"
      },
      {
-        "subject_id":"",
+        "subject_id":"THESIS",
         "subject_value":"Thesis"
      },
      {
