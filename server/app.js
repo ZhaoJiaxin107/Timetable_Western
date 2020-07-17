@@ -31,6 +31,36 @@ app.post('/getSchedule', (req, res) => {
     }
 });
 
+app.get('/getCourseCode/:subject_id',function(req,res){
+    const subjectID=req.params.subject_id;
+    const course= timeTableJson.filter(_course => _course.subject === subjectID);
+    
+    var course_codes=[];
+    if (course){
+        len=course.length;
+        
+        for(var i=0;i<len;i++){
+            course_code_id=course[i].catalog_nbr;
+            description=course[i].className;    
+            
+            course_codes.push({
+                course_code_id:course_code_id,
+                description:description
+            })
+
+        }
+        res.json({course_codes:course_codes});
+
+    }
+    else{
+        res.json({ 
+            status: 400,
+            response: 'Bad Request',
+            message: `The ${subjectID} is unavailable`
+        });
+    }
+
+})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
