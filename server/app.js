@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const fs = require("fs");
 const timeTableJson = JSON.parse(fs.readFileSync('./json/fullTimetable.json'));
+const timeTableInfoJson = JSON.parse(fs.readFileSync('./json/timetableInfo.json'));
 require('dotenv/config');
 
 //MIDDLEWARES
@@ -19,6 +20,50 @@ app.get('/getTimetableSchema', (req, res) => {
     ))]
     res.json({ subjects });
 });
+
+app.get('/getTimetableInfoSchema',(req,res)=>{
+    try{
+        
+        schema = timeTableInfoJson;
+        res.json({ schema });
+
+    } catch (err) {
+        var err = new Error('Not found');
+        err.status = 404;
+        res.json({ message: err });
+    }
+});
+
+app.get('/getCourseCode/:subject_id',function(req,res){
+    const subjectID=req.params.subject_id;
+    const course= timeTableJson.filter(_course => _course.subject === subjectID);
+    
+    var course_codes=[];
+    if (course){
+        len=course.length;
+        
+        for(var i=0;i<len;i++){
+            course_code_id=course[i].catalog_nbr;
+            description=course[i].className;    
+            
+            course_codes.push({
+                course_code_id:course_code_id,
+                description:description
+            })
+
+        }
+        res.json({course_codes:course_codes});
+
+    }
+    else{
+        res.json({ 
+            status: 400,
+            response: 'Bad Request',
+            message: `The ${subjectID} is unavailable`
+        });
+    }
+
+})
 
 app.post('/getSchedule', (req, res) => {
     let subjects = timeTableJson.filter(obj => obj.subject == req.body.subject_id && obj.catalog_nbr == req.body.course_code
