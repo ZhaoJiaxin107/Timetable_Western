@@ -21,17 +21,6 @@ app.get('/getTimetableSchema', (req, res) => {
 });
 
 app.post('/getSchedule', (req, res) => {
-    let subjects = timeTableJson.filter(obj => obj.subject == req.body.subject_id && obj.catalog_nbr == req.body.course_code
-        && obj.course_info[0].ssr_component == req.body.component_id)
-
-    try {
-        res.json(subjects);
-    } catch (err) {
-        res.json({ message: err });
-    }
-});
-
-app.post('/getNewSchedule', (req, res) => {
     const defaults = {
         subject: "ACTURSCI",
         start_time: ["8:00 am", "8:30 am", "9:00 am", "9:30 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 pm", "12:30 pm", "1:00 pm", "1:30 pm", "2:00 pm", "2:30 pm", "3:00 pm", "3:30 pm", "4:00 pm", "4:30 pm", "5:00 pm", "5:30 pm", "6:00 pm", "6:30 pm", "7:00 pm" ],
@@ -50,9 +39,8 @@ app.post('/getNewSchedule', (req, res) => {
     }
      let filters= Object.assign({}, defaults, req.body);
      let checker = (arr, target) => target.some(v => arr.includes(v));
-  //   console.log(checker(obj.course_info[0].days, filters.days));
 
-    let subjects1 = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+    let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
     && obj.subject == filters.subject_id && 
     filters.start_time.includes(obj.course_info[0].start_time.toLowerCase()) &&
     filters.end_time.includes(obj.course_info[0].end_time.toLowerCase()) &&
@@ -60,7 +48,7 @@ app.post('/getNewSchedule', (req, res) => {
     filters.enrl_stat.includes(obj.course_info[0].enrl_stat)
      )
     try {
-        res.json(subjects1);
+        res.json(subjectsResp);
     } catch (err) {
         res.json({ message: err });
     }
