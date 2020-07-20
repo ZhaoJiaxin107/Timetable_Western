@@ -35,36 +35,23 @@ app.get('/getTimetableInfoSchema',(req,res)=>{
 });
 
 app.get('/getCourseCode/:subject_id',function(req,res){
-    const subjectID=req.params.subject_id;
-    const course= timeTableJson.filter(_course => _course.subject === subjectID);
+    let course= timeTableJson.filter(course => course.subject === req.params.subject_id)
+    .map(({catalog_nbr,className})=>({
+            course_code_id:catalog_nbr,
+            description:className
+    }));
     
-    var course_codes=[];
-    if (course){
-        len=course.length;
-        
-        for(var i=0;i<len;i++){
-            course_code_id=course[i].catalog_nbr;
-            description=course[i].className;    
-            
-            course_codes.push({
-                course_code_id:course_code_id,
-                description:description
-            })
-
-        }
-        res.json({course_codes:course_codes});
-
+    if(course!=''){
+        res.json({course_codes:course});
     }
     else{
-        res.json({ 
+        res.json({
             status: 400,
             response: 'Bad Request',
-            message: `The ${subjectID} is unavailable`
-        });
+            message: `The ${req.params.subject_id} is unavailable`
+        }); 
     }
-
 })
-
 app.post('/getSchedule', (req, res) => {
     let subjects = timeTableJson.filter(obj => obj.subject == req.body.subject_id && obj.catalog_nbr == req.body.course_code
         && obj.course_info[0].ssr_component == req.body.component_id)
