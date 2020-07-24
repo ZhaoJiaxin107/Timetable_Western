@@ -90,25 +90,6 @@ app.post('/getSchedule', (req, res) => {
     }
 });
 
-app.get('/getCourseCode/:subject_id', function (req, res) {
-    let course = timeTableJson.filter(course => course.subject === req.params.subject_id)
-        .map(({ catalog_nbr, className }) => ({
-            course_code_id: catalog_nbr,
-            description: className
-        }));
-
-    if (course != '') {
-        res.json({ course_codes: course });
-    }
-    else {
-        res.json({
-            status: 400,
-            response: 'Bad Request',
-            message: `The ${req.params.subject_id} is unavailable`
-        });
-    }
-})
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
