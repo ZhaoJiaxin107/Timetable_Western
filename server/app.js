@@ -3,56 +3,51 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const fs = require("fs");
-const timeTableJson = JSON.parse(fs.readFileSync('./json/fullTimetable.json'));
-const timeTableInfoJson = JSON.parse(fs.readFileSync('./json/timetableInfo.json'));
 require('dotenv/config');
 app.use(bodyParser.json());
 
+const timeTableJson = JSON.parse(fs.readFileSync('./json/fullTimetable.json'));
+const timeTableInfoJson = JSON.parse(fs.readFileSync('./json/timetableInfo.json'));
 
-app.get('/getTimetableSchema', (req, res) => {
+app.get('/timetable/getTimetableSchema', (req, res) => {
     try {
-
-        schema = timeTableInfoJson;
-        res.json({ schema });
-
+        res.json({ timeTableInfoJson });
     } catch (err) {
-        var err = new Error('Not found');
-        err.status = 404;
         res.json({ message: err });
     }
 });
 
-app.get('/getCourseCode/:subject_id', function (req, res) {
+app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
     let course = timeTableJson.filter(course => course.subject === req.params.subject_id)
         .map(({ catalog_nbr, className }) => ({
             course_code_id: catalog_nbr,
             description: className
         }));
-
-    if (course != '') {
+    
+    if (course.length > 0) {
         res.json({ course_codes: course });
-    }
-    else {
+    } else {
         res.json({
             status: 400,
             response: 'Bad Request',
-            message: `The ${req.params.subject_id} is unavailable`
+            message: `The subject ${req.params.subject_id} is unavailable`
         });
     }
 })
 
-app.post('/getSchedule', (req, res) => {
-    var defSubjects = [];
-    var defCampus = [];
-    var defComponent = [];
-    for (var i = 1; i < timeTableInfoJson.subject.length; i++) {
+app.post('/timetable/getSchedule', (req, res) => {
+    let defSubjects = []
+    ,defCampus = []
+    ,defComponent = [];
+  
+    for (let i = 1; i < timeTableInfoJson.subject.length; i++) {
         defSubjects.push(timeTableInfoJson.subject[i].subject_id);
     }
-    for (var i = 1; i < timeTableInfoJson.Campus.length; i++) {
-        defCampus.push(timeTableInfoJson.Campus[i].Campus_value.replace("'", ""));
+    for (let j = 1; j < timeTableInfoJson.Campus.length; j++) {
+        defCampus.push(timeTableInfoJson.Campus[j].Campus_value.replace("'", ""));
     }
-    for (var i = 1; i < timeTableInfoJson.Component.length; i++) {
-        defComponent.push(timeTableInfoJson.Component[i].Component_id);
+    for (let k = 1; k < timeTableInfoJson.Component.length; k++) {
+        defComponent.push(timeTableInfoJson.Component[k].Component_id);
     }
 
     const defaults = {
@@ -78,13 +73,10 @@ app.post('/getSchedule', (req, res) => {
         filters.component.includes(obj.course_info[0].ssr_component) &&
         filters.enrl_stat.includes(obj.course_info[0].enrl_stat)
     )
-    let response = {
-        length: subjectsResp.length,
-        result: subjectsResp
-    }
 
     try {
-        res.json({ response });
+        res.json({ length: subjectsResp.length,
+                    result: subjectsResp });
     } catch (err) {
         res.json({ message: err });
     }
