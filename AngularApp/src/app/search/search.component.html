@@ -5,14 +5,15 @@
 
         <div class="search">
           <label>Subject:</label><br>
-          <select name="subject" ng-model="selectedSubject">
+          <select name="subject" (change)="selectedChangeHandler($event)">
             <option *ngFor="let x of subject" id="{{x.subject_id}}">
               {{x.subject_value}}
             </option>
           </select><br>
+          <p><span>You selected:{{selectedSubject_id}}</span></p>
         </div>
   
-        <div class="search">
+        <!--<div class="search">
           <label>Course Suffix:</label><br>
           <select name="designation">
             <option *ngFor="let x of design" id="{{x.Designation_id}}">
@@ -28,15 +29,14 @@
 
         </div>
   
-        <!-- <div class="search">
+        <div class="search">
           <label>Course Delivery Type:</label><br>
           <select name="delivery">
             <option *ngFor="let x of campus" id="{{x.Campus_id}}">
               {{x.Campus_value}}
             </option>
           </select><br>
-        </div> -->
-  
+        </div> 
   
         <div class="search">
           <label>Component:</label><br>
@@ -92,7 +92,7 @@
               {{x.Campus_value}}
             </option>
           </select><br>
-        </div>
+        </div> -->
   
       </form>
     

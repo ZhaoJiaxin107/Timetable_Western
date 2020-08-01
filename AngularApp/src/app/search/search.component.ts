@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { TimeTable } from '../timetableSchema';
+import { throwError } from 'rxjs';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -17,6 +18,9 @@ export class SearchComponent implements OnInit {
   public errorMsg: string;
   public successMsg: string;
 
+  selectedSubject: string = '';
+  selectedSubject_id: string = '';
+
   constructor(private _http:HttpService) { }
 
   ngOnInit(): void {
@@ -24,7 +28,7 @@ export class SearchComponent implements OnInit {
   }
 
   getTimetable(){
-    this._http.getTimetable().subscribe((timeTable:TimeTable[])=>{
+      this._http.getTimetable().subscribe((timeTable:TimeTable[])=>{
       this.subject=timeTable['timeTableInfoJson']['subject'];
       this.campus=timeTable['timeTableInfoJson']['Campus'];
       this.component=timeTable['timeTableInfoJson']['Component'];
@@ -39,4 +43,14 @@ export class SearchComponent implements OnInit {
     })
   }
 
+  // event handler for the select element's change event
+  selectedChangeHandler (event : any){
+    // update the ui
+    this.selectedSubject = event.target.value;
+    for(var i=0; i<this.subject.length; i++){
+      if(this.subject[i].subject_value == this.selectedSubject){
+          this.selectedSubject_id = this.subject[i].subject_id;
+      }
+    }
+  }
 }
