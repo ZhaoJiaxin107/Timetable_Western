@@ -1,7 +1,8 @@
 <body>
     <div class="search-container">
-      <h1>Search</h1>
-      <form name="searchform" id="searchform" onsubmit="search()">
+      <h2>Search by Subject</h2>
+
+      <form #searchForm="ngForm" (ngSubmit)="searchForm.valid && onSubmit(searchForm)">
 
         <div class="search">
           <label>Subject:</label><br>
@@ -12,6 +13,10 @@
           </select><br>
           <p><span>You selected:{{selectedSubject_id}}</span></p>
         </div>
+        <div>
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </form>
   
         <!--<div class="search">
           <label>Course Suffix:</label><br>
@@ -93,8 +98,7 @@
             </option>
           </select><br>
         </div> -->
-  
-      </form>
+     
     
     </div>
     

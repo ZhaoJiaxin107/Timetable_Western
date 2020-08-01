@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { TimeTable } from '../timetableSchema';
+import { NgForm }   from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
 @Component({
   selector: 'app-search',
@@ -52,5 +54,9 @@ export class SearchComponent implements OnInit {
           this.selectedSubject_id = this.subject[i].subject_id;
       }
     }
+  }
+
+  onSubmit(form : NgForm){
+
   }
 }
