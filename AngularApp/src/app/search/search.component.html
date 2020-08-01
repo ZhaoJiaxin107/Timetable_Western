@@ -1,0 +1,105 @@
+<body>
+    <div class="search-container">
+      <h1>Search</h1>
+      <form name="searchform" id="searchform" onsubmit="search()">
+
+        <div class="search">
+          <label>Subject:</label><br>
+          <select name="subject" ng-model="selectedSubject">
+            <option *ngFor="let x of subject" id="{{x.subject_id}}">
+              {{x.subject_value}}
+            </option>
+          </select><br>
+        </div>
+  
+        <div class="search">
+          <label>Course Suffix:</label><br>
+          <select name="designation">
+            <option *ngFor="let x of design" id="{{x.Designation_id}}">
+              {{x.Designation_value}}
+            </option>
+          </select><br>
+        </div>
+        
+  
+        <div class="search">
+          <label>Course Number:</label><br>
+          <input type="text" placeholder="eg. 1001" id="courseCodeId">
+
+        </div>
+  
+        <!-- <div class="search">
+          <label>Course Delivery Type:</label><br>
+          <select name="delivery">
+            <option *ngFor="let x of campus" id="{{x.Campus_id}}">
+              {{x.Campus_value}}
+            </option>
+          </select><br>
+        </div> -->
+  
+  
+        <div class="search">
+          <label>Component:</label><br>
+          <select name="component">
+            <option *ngFor="let x of component" id="{{x.Component_id}}">
+              {{x.Component_value}}
+            </option>
+          </select><br>
+        </div>
+  
+  
+        <div class="search">
+          <label>Starting Time:</label><br>
+          <select name="">
+            <option value>All</option>
+          </select><br>
+        </div>
+  
+  
+        <div class="search">
+          <label>Ending Time:</label><br>
+          <select name="">
+            <option value>All</option>
+          </select><br>
+        </div>
+  
+  
+        <div class="search">
+          <label>Day of Class:</label><br>
+          <input type="checkbox" id="M"/>
+          <label for="checkbox">Mon</label><br>
+  
+          <input type="checkbox" id="Tu"/>
+          <label for="checkbox">Tue</label><br>
+  
+          <input type="checkbox" id="W"/>
+          <label for="checkbox">Wed</label><br>
+  
+          <input type="checkbox" id="Th"/>
+          <label for="checkbox">Thu</label><br>
+  
+          <input type="checkbox" id="F"/>
+          <label for="checkbox">Fri</label><br>
+  
+  
+        </div>
+  
+  
+        <div class="search">
+          <label>Campus:</label><br>
+          <select name="campus">
+            <option *ngFor="let x of campus" id="{{x.Campus_id}}">
+              {{x.Campus_value}}
+            </option>
+          </select><br>
+        </div>
+  
+      </form>
+    
+    </div>
+    
+    
+    <div class="result-container">
+    
+    </div>
+  </body>
