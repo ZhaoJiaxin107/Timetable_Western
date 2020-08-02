@@ -22,8 +22,8 @@ export class HttpService {
     return this.http.get<TimeTable[]>(`${this.rootURL}/getTimetableSchema`);
   }
 
-  getCourseCode(_id:string){
-    return this.http.get(`${this.rootURL}/getCourseCode` + `/${_id}`);
+  getCourseCode(_id:string):Observable<courseCode[]>{
+    return this.http.get<courseCode[]>(`${this.rootURL}/getCourseCode` + `/${_id}`);
   }
 
   search(body):Observable<any>{
