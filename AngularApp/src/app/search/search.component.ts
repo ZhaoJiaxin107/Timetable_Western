@@ -4,6 +4,7 @@ import { TimeTable } from '../timetableSchema';
 import { NgForm }   from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
+import { courseCode } from '../coursecode';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -23,7 +24,7 @@ export class SearchComponent implements OnInit {
   selectedSubject: string = '';
   selectedSubject_id: string = '';
 
-  constructor(private _http:HttpService) { }
+  constructor(public _http:HttpService) { }
 
   ngOnInit(): void {
     this.getTimetable();
@@ -57,6 +58,10 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(form : NgForm){
-
+    //console.log(this.selectedSubject_id);
+    this._http.getCourseCode(this.selectedSubject_id).subscribe((res) =>{
+      this._http.courseCodes = res as courseCode[];
+    });           
   }
 }
+

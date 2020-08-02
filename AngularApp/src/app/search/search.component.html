@@ -104,6 +104,19 @@
     
     
     <div class="result-container">
-    
+      <table>
+        <thead>
+            <tr>
+                <th>course_code_id</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        
+            <tr *ngFor = "let codes of _http.courseCodes">
+                <td>{{codes.course_code_id}}</td>
+                <td>{{codes.description}}</td>
+            </tr>
+
+    </table>
     </div>
   </body>

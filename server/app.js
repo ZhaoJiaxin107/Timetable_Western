@@ -40,6 +40,8 @@ app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
     }
 })
 
+
+
 app.post('/timetable/getSchedule', (req, res) => {
     let defSubjects = []
     ,defCampus = []
