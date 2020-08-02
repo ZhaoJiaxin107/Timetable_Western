@@ -7,7 +7,12 @@ require('dotenv/config');
 app.use(bodyParser.json());
 //app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.setHeader(
+        'Access-Control-Allow-Origin', 'http://localhost:4200',
+        'Access-Control-Allow-Methods', "GET,POST,OPTIONS,DELETE,PUT",
+        'Content-Type', 'application/json',
+        'Access-Control-Allow-Headers',' Origin, Content-Type, X-Auth-Token',
+        "HTTP/1.1 200 OK");
     next();
   });
 

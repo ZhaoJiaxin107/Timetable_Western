@@ -4,4 +4,7 @@ export interface TimeTable{
     courseType: Array<string>;
     designation: Array<string>;
     subject: Array<string>;
+    start_time:[];
+    end_time:[];
+    day:[];
 }
