@@ -1,9 +1,7 @@
 <body>
-    <div class="search-container">
+    <div class="search-container1">
       <h2>Search by Subject</h2>
-
-      <form #searchForm="ngForm" (ngSubmit)="searchForm.valid && onSubmit(searchForm)">
-
+      <form #searchidForm="ngForm" (ngSubmit)="searchidForm.valid && onSubmitID(searchidForm)">
         <div class="search">
           <label>Subject:</label><br>
           <select name="subject" (change)="selectedChangeHandler($event)">
@@ -17,93 +15,8 @@
           <button class="submit" type="submit">Submit</button>
         </div>
       </form>
-  
-        <!--<div class="search">
-          <label>Course Suffix:</label><br>
-          <select name="designation">
-            <option *ngFor="let x of design" id="{{x.Designation_id}}">
-              {{x.Designation_value}}
-            </option>
-          </select><br>
-        </div>
-        
-  
-        <div class="search">
-          <label>Course Number:</label><br>
-          <input type="text" placeholder="eg. 1001" id="courseCodeId">
-
-        </div>
-  
-        <div class="search">
-          <label>Course Delivery Type:</label><br>
-          <select name="delivery">
-            <option *ngFor="let x of campus" id="{{x.Campus_id}}">
-              {{x.Campus_value}}
-            </option>
-          </select><br>
-        </div> 
-  
-        <div class="search">
-          <label>Component:</label><br>
-          <select name="component">
-            <option *ngFor="let x of component" id="{{x.Component_id}}">
-              {{x.Component_value}}
-            </option>
-          </select><br>
-        </div>
-  
-  
-        <div class="search">
-          <label>Starting Time:</label><br>
-          <select name="">
-            <option value>All</option>
-          </select><br>
-        </div>
-  
-  
-        <div class="search">
-          <label>Ending Time:</label><br>
-          <select name="">
-            <option value>All</option>
-          </select><br>
-        </div>
-  
-  
-        <div class="search">
-          <label>Day of Class:</label><br>
-          <input type="checkbox" id="M"/>
-          <label for="checkbox">Mon</label><br>
-  
-          <input type="checkbox" id="Tu"/>
-          <label for="checkbox">Tue</label><br>
-  
-          <input type="checkbox" id="W"/>
-          <label for="checkbox">Wed</label><br>
-  
-          <input type="checkbox" id="Th"/>
-          <label for="checkbox">Thu</label><br>
-  
-          <input type="checkbox" id="F"/>
-          <label for="checkbox">Fri</label><br>
-  
-  
-        </div>
-  
-  
-        <div class="search">
-          <label>Campus:</label><br>
-          <select name="campus">
-            <option *ngFor="let x of campus" id="{{x.Campus_id}}">
-              {{x.Campus_value}}
-            </option>
-          </select><br>
-        </div> -->
-     
-    
     </div>
-    
-    
-    <div class="result-container">
+    <div class="result-container1">
       <table>
         <thead>
             <tr>
@@ -111,12 +24,107 @@
                 <th>description</th>
             </tr>
         </thead>
-        
             <tr *ngFor = "let codes of _http.courseCodes">
                 <td>{{codes.course_code_id}}</td>
                 <td>{{codes.description}}</td>
             </tr>
-
     </table>
+    </div>
+    
+    <div class="search-container">
+      <h1>Search</h1>
+
+      <form [formGroup]="searchForm">
+        <div class="search">
+          <label>Subject:</label><br>
+          <select name="subject" 
+          (change)=getSelected($event.target.name,$event)
+          ng-model="subject">
+            
+            <option *ngFor="let x of subject" value="{{x.subject_id}}">
+              {{x.subject_value}}
+            </option>
+          </select><br>
+        </div>
+
+        <div class="search">
+          <label>Course Suffix:</label><br>
+          <select name="designation" (change)=getSelected($event.target.name,$event)>
+            <option name="designation" *ngFor="let x of design" value="{{x.Designation_id}}">
+              {{x.Designation_value}}
+            </option>
+          </select><br>
+        </div>
+        
+        <div class="search">
+          <label>Course Number:</label><br>
+          <input ng-model="codeID" type="text" placeholder="eg. 1001" id="courseCodeId">
+          <input value="test" type="button" >
+        </div>
+        <div class="search">
+          <label>Component:</label><br>
+          <select name="component" 
+          (change)=getSelected($event.target.name,$event)
+          ng-model = "component">
+            <option *ngFor="let x of component" value="{{x.Component_id}}">
+              {{x.Component_value}}
+            </option>
+          </select><br>
+        </div>
+  
+        <div class="search">
+          <label>Starting Time:</label><br>
+          <select name="start_time"
+          (change)=getSelected($event.target.name,$event)
+          ng-model="start_time">
+            <option *ngFor="let x of start_time" value="{{x}}">
+              {{x}}
+            </option>
+          </select><br>
+        </div>
+        <div class="search">
+          <label>Ending Time:</label><br>
+          <select name="end_time"
+          (change)=getSelected($event.target.name,$event)
+          ng-model="end_time">
+            <option *ngFor="let x of end_time" value="{{x}}">
+              {{x}}
+            </option>
+          </select><br>
+        </div>
+        <div class="search">
+          <label>Day of Class:</label><br>
+          <label *ngFor="let x of day" >
+            <input
+            ng-click="getDays($event.target.checked,x.key)" 
+            type="checkbox" 
+            value="{{x.key}}"
+            (change)="getDays($event)"/>
+              {{x.value}}
+          </label>
+        </div>        
+        <div class="search">
+          <label>Campus:</label><br>
+          <select name="campus"
+          (change)=getSelected($event.target.name,$event)
+          ng-model="campus">
+            <option *ngFor="let x of campus" value="{{x.Campus_id}}">
+              {{x.Campus_value}}
+            </option>
+          </select><br>
+        </div>
+
+
+        <div class="submit1">
+          <input type="submit" value="Submit"/>
+        </div>
+  
+      </form>
+    
+    </div>
+    
+    
+    <div class="result-container">
+    
     </div>
   </body>

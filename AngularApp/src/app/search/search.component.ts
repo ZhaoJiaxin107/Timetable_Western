@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { HttpService } from '../http.service';
 import { TimeTable } from '../timetableSchema';
-import { NgForm }   from '@angular/forms';
+import { Result } from '../result';
+import { Search } from '../search';
+import { NgForm, FormControl,FormBuilder,Validators, FormGroup,FormArray } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
 import { courseCode } from '../coursecode';
@@ -17,6 +19,16 @@ export class SearchComponent implements OnInit {
   component:any[];
   campus:any[];
   design:any[];
+  start_time:any[];
+  end_time:any[];
+
+  day = [
+    {value:"Mon", key:"M"},
+    {value:"Tue", key:"Tu"},
+    {value:"Wed", key:"W"},
+    {value:"Thu", key:"Th"},
+    {value:"Fri", key:"F"}
+  ]
 
   public errorMsg: string;
   public successMsg: string;
@@ -24,11 +36,23 @@ export class SearchComponent implements OnInit {
   selectedSubject: string = '';
   selectedSubject_id: string = '';
 
-  constructor(public _http:HttpService) { }
+  constructor(public _http:HttpService,
+    public formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.getTimetable();
   }
+  
+  searchForm = this.formBuilder.group({
+    subject: new FormControl('', Validators.required),
+    start_time: new FormControl('', Validators.required),
+    end_time: new FormControl('', Validators.required),
+    campus: new FormControl('', Validators.required),
+    enrl_stat: new FormControl('Not Full', Validators.required), 
+    component: new FormControl('',Validators.required),
+    days: new FormArray([])
+  });
+
 
   getTimetable(){
       this._http.getTimetable().subscribe((timeTable:TimeTable[])=>{
@@ -36,8 +60,8 @@ export class SearchComponent implements OnInit {
       this.campus=timeTable['timeTableInfoJson']['Campus'];
       this.component=timeTable['timeTableInfoJson']['Component'];
       this.design=timeTable['timeTableInfoJson']['Designation'];
-      // this.timeTable=timeTable;
-      
+      this.start_time=timeTable['timeTableInfoJson']['start_time'];
+      this.end_time=timeTable['timeTableInfoJson']['end_time'];
       this.loading=false;
     },
     (error:ErrorEvent)=>{
@@ -57,11 +81,27 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  onSubmit(form : NgForm){
+  onSubmitID(form : NgForm){
     //console.log(this.selectedSubject_id);
     this._http.getCourseCode(this.selectedSubject_id).subscribe((res) =>{
       this._http.courseCodes = res as courseCode[];
     });           
+  }
+
+  getSelected(name:string, event:any){
+    //console.log();
+    var string = `${event.target.value}`;
+    console.log(`${name}:${string}`);
+  }
+
+  getDays(event: any){
+    const  daysArray: FormArray = this.searchForm.get('days') as FormArray;
+    if(event.target.checked){
+      daysArray.push(new FormControl(event.target.value));
+    }
+  }
+  get f(){
+    return this.searchForm.controls;
   }
 }
 
