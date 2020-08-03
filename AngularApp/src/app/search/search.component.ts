@@ -31,6 +31,7 @@ export class SearchComponent implements OnInit {
   ]
   courseInfoResult:Object;
   resultLength: Number;
+  resultLengthStr: string;
   courseResult: any[];
 
   public errorMsg: string;
@@ -135,6 +136,8 @@ export class SearchComponent implements OnInit {
       this.courseInfoResult =this._http.results;
       console.log(this.courseInfoResult);
       this.resultLength =this.courseInfoResult['length'];
+      this.resultLengthStr = this.resultLength + " Results";
+      console.log(this.resultLengthStr);
       this.courseResult = this.courseInfoResult['result'];
     })
   }
