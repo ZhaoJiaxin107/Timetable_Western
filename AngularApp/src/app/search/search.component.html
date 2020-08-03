@@ -23,11 +23,11 @@
         </select><br>
       </div>
       
-      <div class="search">
+      <!--<div class="search">
         <label>Course Number:</label><br>
         <input ng-model="codeID" type="text" placeholder="eg. 1001" id="courseCodeId">
         <input value="test" type="button" >
-      </div> 
+      </div>--> 
 
       <div class="search">
         <label>Component:</label><br>
@@ -79,16 +79,50 @@
         </select><br>
       </div>
 
-      <div class="submit1">
-        <input type="submit" value="Submit"/>
+      <div>
+        <input type="submit" value="Submit" class="submit"/>
       </div>
     </form>
-  
   </div>
   
   
   <div class="result-container">
-  
+    <div class = "row">
+      <h3>{{resultLength}} Results</h3>
+      <div *ngFor = "let result of courseResult">
+          <h4>Class Name: {{result.className}}</h4>
+          <p><strong>Course Description:</strong> 
+            {{result.catalog_description}}</p>
+          <table class="pure-table pure-table-bordered">
+            <thead>
+                <tr>
+                    <th>Class Section</th>
+                    <th>Class Number</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Campus</th>
+                    <th>Days</th>
+                    <th>Instructors</th>
+                    <th>Component</th>
+                    <th>Enrl_Stat</th>
+                    <th>Descr</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>{{result.course_info[0].class_section}}</td>
+                <td>{{result.course_info[0].class_nbr}}</td>
+                <td>{{result.course_info[0].start_time}}</td>
+                <td>{{result.course_info[0].end_time}}</td>
+                <td>{{result.course_info[0].campus}}</td>
+                <td>{{result.course_info[0].days}}</td>
+                <td>{{result.course_info[0].instructors}}</td>
+                <td>{{result.course_info[0].ssr_component}}</td>
+                <td>{{result.course_info[0].enrl_stat}}</td>
+                <td>{{result.course_info[0].descr}}</td>
+            </tr>
+        </table>  
+      </div>
+    </div>
   </div>
     <!--<div class="search-container1">
       <h2>Search by Subject</h2>

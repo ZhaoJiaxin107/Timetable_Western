@@ -29,6 +29,9 @@ export class SearchComponent implements OnInit {
     { value:"Thu", key:"Th" },
     { value:"Fri", key:"F"  }
   ]
+  courseInfoResult:Object;
+  resultLength: Number;
+  courseResult: any[];
 
   public errorMsg: string;
   public successMsg: string;
@@ -128,8 +131,10 @@ export class SearchComponent implements OnInit {
     console.log(body);
     this._http.search(body).subscribe(res =>{
       this._http.results = res as Result[];
-      const courseInfo = JSON.stringify(this._http.results);
-      console.log(courseInfo);
+      this.courseInfoResult =this._http.results;
+      console.log(this.courseInfoResult);
+      this.resultLength =this.courseInfoResult['length'];
+      this.courseResult = this.courseInfoResult['result'];
     })
   }
 }
