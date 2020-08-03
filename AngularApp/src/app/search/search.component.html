@@ -1,10 +1,10 @@
 <body>
   <div class="search-container">
-    <h1>Search</h1>
+    <h2>Search</h2>
 
     <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
       <div class="search">
-        <label>Subject:</label><br>
+        <label>Subject:</label>
         <select formControlName="subject" 
         name="subject" 
         (change)=getSelected($event.target.name,$event)>
@@ -15,7 +15,7 @@
       </div>
 
       <div class="search">
-        <label>Course Suffix:</label><br>
+        <label>Course Suffix:</label>
         <select name="designation" (change)=getSelected($event.target.name,$event)>
           <option name="designation" *ngFor="let x of design" value="{{x.Designation_id}}">
             {{x.Designation_value}}
@@ -30,7 +30,7 @@
       </div>--> 
 
       <div class="search">
-        <label>Component:</label><br>
+        <label>Component:</label>
         <select name="component" formControlName="component">
           <option *ngFor="let x of component" value="{{x.Component_id}}">
             {{x.Component_value}}
@@ -40,7 +40,7 @@
 
 
       <div class="search">
-        <label>Starting Time:</label><br>
+        <label>Starting Time:</label>
         <select name="start_time" formControlName="start_time">
           <option>All</option>
           <option *ngFor="let x of start_time" value="{{x}}">
@@ -51,7 +51,7 @@
 
 
       <div class="search">
-        <label>Ending Time:</label><br>
+        <label>Ending Time:</label>
         <select name="end_time" formControlName="end_time">
           <option>All</option>
           <option *ngFor="let x of end_time" value="{{x}}">
@@ -62,8 +62,8 @@
 
 
       <div class="search">
-        <label>Day of Class:</label><br>
-        <label *ngFor="let x of day; let i=index" >
+        <label>Day of Class:</label>
+        <label *ngFor="let x of day; let i=index" class = "days">
           <input
           type="checkbox" 
           value="{{x.key}}"
@@ -73,7 +73,7 @@
       </div>
 
       <div class="search">
-        <label>Campus:</label><br>
+        <label>Campus:</label>
         <select name="campus" formControlName="campus">
           <option *ngFor="let x of campus" value="{{x.Campus_value}}">
             {{x.Campus_value}}
