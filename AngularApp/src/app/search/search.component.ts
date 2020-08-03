@@ -23,11 +23,11 @@ export class SearchComponent implements OnInit {
   end_time:any[];
    
   day = [
-    { value:"Mon", key:"M"  },
-    { value:"Tue", key:"Tu" },
-    { value:"Wed", key:"W"  },
+    { value:"Mon", key:"M" },
+    { value:"Tue", key:"Tu"},
+    { value:"Wed", key:"W" },
     { value:"Thu", key:"Th" },
-    { value:"Fri", key:"F"  }
+    { value:"Fri", key:"F" }
   ]
   courseInfoResult:Object;
   resultLength: Number;
@@ -103,10 +103,11 @@ export class SearchComponent implements OnInit {
     if(event.target.checked){
       daysArray.push(new FormControl(event.target.value));
     }
-    else{
+    /*else{
       daysArray.removeAt(index);
-    }
+    }*/
   }
+
   get f(){
     return this.searchForm.controls;
   }

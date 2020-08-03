@@ -64,7 +64,9 @@
       <div class="search">
         <label>Day of Class:</label><br>
         <label *ngFor="let x of day; let i=index" >
-          <input type="checkbox" value="{{x.key}}"
+          <input
+          type="checkbox" 
+          value="{{x.key}}"
           (change)="getDays($event,i)"/>
             {{x.value}}
         </label>
