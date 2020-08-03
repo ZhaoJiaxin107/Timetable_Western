@@ -33,9 +33,29 @@ label{
   color:#2F4F4F;
   font-family: 'Microsoft YaHei';
 }
-
+.search{
+  margin-bottom: 30px;
+}
+.colleft{
+  float: left;
+  margin-left:120px;
+  margin-right: 150px;
+}
+.colright{
+  margin-left: 120px;
+  overflow: auto;
+}
+.result{
+  position: absolute;
+  left: 20px;
+  font-weight: bold;
+  font-size:16px;
+}
+.course{
+  margin-top: 20px;
+}
 .submit{
-    margin-left:40px;
+    margin-left:80px;
     background-color:#0D8FBF;
     border: none;
     color: white;
