@@ -1,5 +1,96 @@
 <body>
-    <div class="search-container1">
+  <div class="search-container">
+    <h1>Search</h1>
+
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <div class="search">
+        <label>Subject:</label><br>
+        <select formControlName="subject" 
+        name="subject" 
+        (change)=getSelected($event.target.name,$event)>
+          <option ng-model="subject" *ngFor="let x of subject" value="{{x.subject_id}}">
+            {{x.subject_value}}
+          </option>
+        </select><br>
+      </div>
+
+      <div class="search">
+        <label>Course Suffix:</label><br>
+        <select name="designation" (change)=getSelected($event.target.name,$event)>
+          <option name="designation" *ngFor="let x of design" value="{{x.Designation_id}}">
+            {{x.Designation_value}}
+          </option>
+        </select><br>
+      </div>
+      
+      <div class="search">
+        <label>Course Number:</label><br>
+        <input ng-model="codeID" type="text" placeholder="eg. 1001" id="courseCodeId">
+        <input value="test" type="button" >
+      </div> 
+
+      <div class="search">
+        <label>Component:</label><br>
+        <select name="component" formControlName="component">
+          <option *ngFor="let x of component" value="{{x.Component_id}}">
+            {{x.Component_value}}
+          </option>
+        </select><br>
+      </div>
+
+
+      <div class="search">
+        <label>Starting Time:</label><br>
+        <select name="start_time" formControlName="start_time">
+          <option>All</option>
+          <option *ngFor="let x of start_time" value="{{x}}">
+            {{x}}
+          </option>
+        </select><br>
+      </div>
+
+
+      <div class="search">
+        <label>Ending Time:</label><br>
+        <select name="end_time" formControlName="end_time">
+          <option>All</option>
+          <option *ngFor="let x of end_time" value="{{x}}">
+            {{x}}
+          </option>
+        </select><br>
+      </div>
+
+
+      <div class="search">
+        <label>Day of Class:</label><br>
+        <label *ngFor="let x of day; let i=index" >
+          <input type="checkbox" value="{{x.key}}"
+          (change)="getDays($event,i)"/>
+            {{x.value}}
+        </label>
+      </div>
+
+      <div class="search">
+        <label>Campus:</label><br>
+        <select name="campus" formControlName="campus">
+          <option *ngFor="let x of campus" value="{{x.Campus_value}}">
+            {{x.Campus_value}}
+          </option>
+        </select><br>
+      </div>
+
+      <div class="submit1">
+        <input type="submit" value="Submit"/>
+      </div>
+    </form>
+  
+  </div>
+  
+  
+  <div class="result-container">
+  
+  </div>
+    <!--<div class="search-container1">
       <h2>Search by Subject</h2>
       <form #searchidForm="ngForm" (ngSubmit)="searchidForm.valid && onSubmitID(searchidForm)">
         <div class="search">
@@ -29,102 +120,5 @@
                 <td>{{codes.description}}</td>
             </tr>
     </table>
-    </div>
-    
-    <div class="search-container">
-      <h1>Search</h1>
-
-      <form [formGroup]="searchForm">
-        <div class="search">
-          <label>Subject:</label><br>
-          <select name="subject" 
-          (change)=getSelected($event.target.name,$event)
-          ng-model="subject">
-            
-            <option *ngFor="let x of subject" value="{{x.subject_id}}">
-              {{x.subject_value}}
-            </option>
-          </select><br>
-        </div>
-
-        <div class="search">
-          <label>Course Suffix:</label><br>
-          <select name="designation" (change)=getSelected($event.target.name,$event)>
-            <option name="designation" *ngFor="let x of design" value="{{x.Designation_id}}">
-              {{x.Designation_value}}
-            </option>
-          </select><br>
-        </div>
-        
-        <div class="search">
-          <label>Course Number:</label><br>
-          <input ng-model="codeID" type="text" placeholder="eg. 1001" id="courseCodeId">
-          <input value="test" type="button" >
-        </div>
-        <div class="search">
-          <label>Component:</label><br>
-          <select name="component" 
-          (change)=getSelected($event.target.name,$event)
-          ng-model = "component">
-            <option *ngFor="let x of component" value="{{x.Component_id}}">
-              {{x.Component_value}}
-            </option>
-          </select><br>
-        </div>
-  
-        <div class="search">
-          <label>Starting Time:</label><br>
-          <select name="start_time"
-          (change)=getSelected($event.target.name,$event)
-          ng-model="start_time">
-            <option *ngFor="let x of start_time" value="{{x}}">
-              {{x}}
-            </option>
-          </select><br>
-        </div>
-        <div class="search">
-          <label>Ending Time:</label><br>
-          <select name="end_time"
-          (change)=getSelected($event.target.name,$event)
-          ng-model="end_time">
-            <option *ngFor="let x of end_time" value="{{x}}">
-              {{x}}
-            </option>
-          </select><br>
-        </div>
-        <div class="search">
-          <label>Day of Class:</label><br>
-          <label *ngFor="let x of day" >
-            <input
-            ng-click="getDays($event.target.checked,x.key)" 
-            type="checkbox" 
-            value="{{x.key}}"
-            (change)="getDays($event)"/>
-              {{x.value}}
-          </label>
-        </div>        
-        <div class="search">
-          <label>Campus:</label><br>
-          <select name="campus"
-          (change)=getSelected($event.target.name,$event)
-          ng-model="campus">
-            <option *ngFor="let x of campus" value="{{x.Campus_id}}">
-              {{x.Campus_value}}
-            </option>
-          </select><br>
-        </div>
-
-
-        <div class="submit1">
-          <input type="submit" value="Submit"/>
-        </div>
-  
-      </form>
-    
-    </div>
-    
-    
-    <div class="result-container">
-    
-    </div>
+    </div>-->
   </body>

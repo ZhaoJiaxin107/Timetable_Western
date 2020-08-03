@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { TimeTable } from './timetableSchema';
 import { courseCode } from './coursecode';
 import { Search } from './search';
+import { Result } from './result';
 import { Observable } from 'rxjs';
 
 
@@ -13,7 +14,10 @@ import { Observable } from 'rxjs';
 export class HttpService {
   selectedCourseCode : courseCode;
   courseCodes: courseCode[]; 
-  
+
+  selectedResult : Result;
+  results: Result[];
+
   constructor(private http: HttpClient) { }
 
   rootURL=`${environment.API_URL}/timetable`;

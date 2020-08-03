@@ -5,7 +5,7 @@ const cors = require('cors');
 const fs = require("fs");
 require('dotenv/config');
 app.use(bodyParser.json());
-//app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(function (req, res, next) {
     res.setHeader(
         'Access-Control-Allow-Origin', 'http://localhost:4200',
@@ -48,6 +48,7 @@ app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
 
 
 app.post('/timetable/getSchedule', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     let defSubjects = []
     ,defCampus = []
     ,defComponent = [];

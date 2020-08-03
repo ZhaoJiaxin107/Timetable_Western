@@ -3,7 +3,7 @@ import { HttpService } from '../http.service';
 import { TimeTable } from '../timetableSchema';
 import { Result } from '../result';
 import { Search } from '../search';
-import { NgForm, FormControl,FormBuilder,Validators, FormGroup,FormArray } from '@angular/forms';
+import { NgForm, FormControl,FormBuilder,Validators,FormGroup,FormArray } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
 import { courseCode } from '../coursecode';
@@ -21,13 +21,13 @@ export class SearchComponent implements OnInit {
   design:any[];
   start_time:any[];
   end_time:any[];
-
+   
   day = [
-    {value:"Mon", key:"M"},
-    {value:"Tue", key:"Tu"},
-    {value:"Wed", key:"W"},
-    {value:"Thu", key:"Th"},
-    {value:"Fri", key:"F"}
+    { value:"Mon", key:"M"  },
+    { value:"Tue", key:"Tu" },
+    { value:"Wed", key:"W"  },
+    { value:"Thu", key:"Th" },
+    { value:"Fri", key:"F"  }
   ]
 
   public errorMsg: string;
@@ -44,13 +44,13 @@ export class SearchComponent implements OnInit {
   }
   
   searchForm = this.formBuilder.group({
-    subject: new FormControl('', Validators.required),
-    start_time: new FormControl('', Validators.required),
-    end_time: new FormControl('', Validators.required),
-    campus: new FormControl('', Validators.required),
-    enrl_stat: new FormControl('Not Full', Validators.required), 
-    component: new FormControl('',Validators.required),
-    days: new FormArray([])
+    subject: new FormControl('All Subjects', Validators.required),
+    start_time: new FormControl('All', Validators.required),
+    end_time: new FormControl('All', Validators.required),
+    days: new FormArray([]),
+    campus: new FormControl('Any', Validators.required),
+    //enrl_stat: new FormControl('Not Full', Validators.required), 
+    component: new FormControl('All',Validators.required)
   });
 
 
@@ -93,15 +93,44 @@ export class SearchComponent implements OnInit {
     var string = `${event.target.value}`;
     console.log(`${name}:${string}`);
   }
-
-  getDays(event: any){
-    const  daysArray: FormArray = this.searchForm.get('days') as FormArray;
+  
+  
+  getDays(event: any,index:number){
+    const daysArray: FormArray = this.searchForm.get('days') as FormArray;
     if(event.target.checked){
       daysArray.push(new FormControl(event.target.value));
+    }
+    else{
+      daysArray.removeAt(index);
     }
   }
   get f(){
     return this.searchForm.controls;
+  }
+
+  onSubmit(){
+    if(this.searchForm.value.subject=="All Subjects"){
+      this.searchForm.removeControl("subject");
+    }
+    if(this.searchForm.value.start_time=="All"){
+      this.searchForm.removeControl("start_time");
+    }
+    if(this.searchForm.value.end_time=="All"){
+      this.searchForm.removeControl("end_time");
+    }
+    if(this.searchForm.value.campus=="Any"){
+      this.searchForm.removeControl("campus");
+    }
+    if(this.searchForm.value.component=="All"){
+      this.searchForm.removeControl("component");
+    }
+    const body=JSON.stringify(this.searchForm.value);
+    console.log(body);
+    this._http.search(body).subscribe(res =>{
+      this._http.results = res as Result[];
+      const courseInfo = JSON.stringify(this._http.results);
+      console.log(courseInfo);
+    })
   }
 }
 
