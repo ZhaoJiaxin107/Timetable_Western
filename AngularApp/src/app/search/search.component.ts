@@ -29,6 +29,7 @@ export class SearchComponent implements OnInit {
     { value:"Thu", key:"Th" },
     { value:"Fri", key:"F" }
   ]
+  daysArray=['M','Tu','W','Th','F'];
   courseInfoResult:Object;
   resultLength: Number;
   resultLengthStr: string;
@@ -51,7 +52,7 @@ export class SearchComponent implements OnInit {
     subject: new FormControl('All Subjects', Validators.required),
     start_time: new FormControl('All', Validators.required),
     end_time: new FormControl('All', Validators.required),
-    days: new FormArray([]),
+    days: new FormControl(this.daysArray,Validators.required),
     campus: new FormControl('Any', Validators.required),
     //enrl_stat: new FormControl('Not Full', Validators.required), 
     component: new FormControl('All',Validators.required)
@@ -99,14 +100,16 @@ export class SearchComponent implements OnInit {
   }
   
   
-  getDays(event: any,index:number){
-    const daysArray: FormArray = this.searchForm.get('days') as FormArray;
+  getDays(event: any){
     if(event.target.checked){
-      daysArray.push(new FormControl(event.target.value));
+      this.daysArray.push((event.target.value));
     }
-    /*else{
-      daysArray.removeAt(index);
-    }*/
+    else{
+      this.daysArray=this.daysArray.filter(function(item){
+        return item != event.target.value
+      })
+    }
+    this.searchForm.patchValue({days:this.daysArray})
   }
 
   get f(){
