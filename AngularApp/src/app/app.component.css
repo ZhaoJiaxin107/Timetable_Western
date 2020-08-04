@@ -42,6 +42,39 @@ p{
     font-size: 19px;
 }
 .footer{
-    background-color: blueviolet;
+    background-color: #8845A3;
     height:190px;
+    width: 100%;
+    position: absolute;
+}
+.address{
+    position: relative;
+    float: left;
+    left:500px;
+    bottom: 180px;
+    color:cornsilk;
+}
+.key{
+    font-weight: bold;
+}
+.contact{
+    color: cornsilk;
+    text-decoration: none;  
+}
+.keyTopics{
+    float:right;
+    position: relative;
+    right:400px;
+    bottom: 180px;
+    color: cornsilk;
+}
+.resources{
+    float: right;
+    position: relative;
+    right:10px;
+    bottom: 185px;
+    color: cornsilk;
+}
+.cboth{
+    clear: both;
 }
