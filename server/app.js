@@ -5,6 +5,8 @@ const cors = require('cors');
 const fs = require("fs");
 require('dotenv/config');
 app.use(bodyParser.json());
+app.use(cors())
+
 
 const timeTableJson = JSON.parse(fs.readFileSync('./json/fullTimetable.json'));
 const timeTableInfoJson = JSON.parse(fs.readFileSync('./json/timetableInfo.json'));
