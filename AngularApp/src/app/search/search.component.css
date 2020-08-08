@@ -73,7 +73,19 @@ label{
     font-size:125%;
     cursor: pointer;
 }
-
+.s1{
+    margin-left: 20px;
+    width:320px;
+    box-sizing:border-box;
+    border:1px solid #ccc;
+    padding:5px;
+    border-radius:3px;
+    font-size:14;
+    font-family:"Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB"," Microsoft Yahei",sans-serif;
+}
+.result-container{
+  display: none;
+}
 table{
   border-collapse: collapse;
   border-spacing: 0;

@@ -36,6 +36,7 @@ export class SearchComponent implements OnInit {
   resultLengthStr: string;
   courseResult: any[];
   p:Number;
+  className:string;
   public errorMsg: string;
   public successMsg: string;
 
@@ -118,6 +119,7 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(){
+    document.getElementById("result-container").style.display ="block" ;
     if(this.searchForm.value.subject=="All Subjects"){
       this.searchForm.removeControl("subject");
     }
@@ -144,6 +146,16 @@ export class SearchComponent implements OnInit {
       console.log(this.resultLengthStr);
       this.courseResult = this.courseInfoResult['result'];
     })
+  }
+
+  Search(){
+    if(this.className !=""){
+    this.courseResult = this.courseResult.filter(res =>{
+      return res.className.toLocaleLowerCase().match(this.className.toLocaleLowerCase());
+    });
+  }else if (this.className == ""){
+    this.onSubmit();
+  }
   }
 }
 
