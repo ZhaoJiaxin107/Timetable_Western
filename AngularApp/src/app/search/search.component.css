@@ -82,10 +82,9 @@ label{
     border-radius:3px;
     font-size:14;
     font-family:"Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB"," Microsoft Yahei",sans-serif;
-}
-.result-container{
-  display: none;
-}
+    display: none;
+  }
+
 table{
   border-collapse: collapse;
   border-spacing: 0;
