@@ -7,6 +7,7 @@ import { NgForm, FormControl,FormBuilder,Validators,FormGroup,FormArray } from '
 import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
 import { courseCode } from '../coursecode';
+import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -34,7 +35,7 @@ export class SearchComponent implements OnInit {
   resultLength: Number;
   resultLengthStr: string;
   courseResult: any[];
-
+  p:Number;
   public errorMsg: string;
   public successMsg: string;
 

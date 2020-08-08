@@ -98,7 +98,7 @@
       <div id="result">{{resultLengthStr}}</div>
       <br>
       <br>
-      <div *ngFor = "let result of courseResult" class="course">
+      <div *ngFor = "let result of courseResult | paginate:{itemsPerPage:5,currentPage:p}" class="course">
           <h3>Class Name: {{result.className}}</h3>
           <p><strong>Course Description:</strong> 
             {{result.catalog_description}}</p>
@@ -131,6 +131,7 @@
             </tr>
         </table>  
       </div>
+      <pagination-controls (pageChange)="p=$event"></pagination-controls>
   </div>
 </body>
 
