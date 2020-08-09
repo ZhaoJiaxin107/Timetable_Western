@@ -47,7 +47,7 @@ label{
 }
 #result{
   position: absolute;
-  left: 20px;
+  left: 30px;
   font-weight: bold;
   font-size:16px;
   display:inline;
@@ -84,6 +84,11 @@ label{
     font-family:"Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB"," Microsoft Yahei",sans-serif;
     display: none;
   }
+
+.result-container{
+  width:85%;
+  margin-left: 20px;
+}
 
 table{
   border-collapse: collapse;

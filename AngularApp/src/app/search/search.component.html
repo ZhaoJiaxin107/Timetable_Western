@@ -118,6 +118,7 @@
                     <th>Descr</th>
                 </tr>
             </thead>
+            <tbody>
             <tr>
                 <td>{{result.course_info[0].class_section}}</td>
                 <td>{{result.course_info[0].class_nbr}}</td>
@@ -130,6 +131,7 @@
                 <td>{{result.course_info[0].enrl_stat}}</td>
                 <td>{{result.course_info[0].descr}}</td>
             </tr>
+          </tbody>
         </table>  
       </div>
       <pagination-controls (pageChange)="p=$event"></pagination-controls>

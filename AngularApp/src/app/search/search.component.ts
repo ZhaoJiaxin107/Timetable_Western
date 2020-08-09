@@ -119,7 +119,7 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(){
-    document.getElementById("s1").style.display ="inline" ;
+    document.getElementById("s1").style.display ="inline";
     if(this.searchForm.value.subject=="All Subjects"){
       this.searchForm.removeControl("subject");
     }
