@@ -153,9 +153,9 @@ export class SearchComponent implements OnInit {
     this.courseResult = this.courseResult.filter(res =>{
       return res.className.toLocaleLowerCase().match(this.className.toLocaleLowerCase());
     });
-  }else if (this.className == ""){
-    this.onSubmit();
-  }
+    }else if (this.className == ""){
+       this.onSubmit();
+    }
   }
 }
 
