@@ -108,6 +108,7 @@ export class SearchComponent implements OnInit {
 
   onSubmit(){
     document.getElementById("s1").style.display ="inline";
+    document.getElementById("line").style.display ="block";
     if(this.searchForm.value.subject=="All Subjects"){
       this.searchForm.value.subject='';
     }

@@ -78,7 +78,7 @@ app.post('/timetable/getScheduleCourseCode', function (req, res) {
 })
 
 
-app.post('/timetable/getSchedule', (req, res) => {
+app.post('/timetable/getScheduleByAll', (req, res) => {
     //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     let defSubjects = []
     ,defCampus = []

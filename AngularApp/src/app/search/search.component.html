@@ -110,47 +110,64 @@
       </form>
   </div>
   <br>
-  <div class = "line"></div>
+  
   <div class="result-container" id="result-container">
-      <br>
+    <HR id="line" style="border:1 dashed #987cb9; display: none;" width="100%" color=#987cb9 SIZE=1>
+      <a id="result"></a>
       <div id="result">{{resultLengthStr}}</div>
       <br>
       <br>
       <input type="text" [(ngModel)] = "className" (input) = "Search()" placeholder="Search by Class Name" class="s1" id="s1"/>
       <div *ngFor = "let result of courseResult | paginate:{itemsPerPage:5,currentPage:p}" class="course">
-          <h3>{{result.subject}}&nbsp;{{result.catalog_nbr}}:&nbsp;&nbsp;{{result.className}}</h3>
+          <h3>{{result.subject +" "+result.catalog_nbr +" - "+ result.className}}</h3>
           <p><strong>Course Description:</strong> 
             {{result.catalog_description}}</p>
           <table class="pure-table pure-table-bordered">
             <thead>
                 <tr>
-                    <th>Class Section</th>
+                    <th>Section</th>
+                    <th>Component</th>
                     <th>Class Number</th>
+                    <th>Day of Class</th>
                     <th>Start Time</th>
                     <th>End Time</th>
-                    <th>Campus</th>
-                    <th>Days</th>
+                    
+                    <th>Location</th>
+                    
                     <th>Instructors</th>
-                    <th>Component</th>
+                    
                     <th>Enrollment Status</th>
-                    <th>Description</th>
+                    <th>Requisites and Constrains</th>
+                    <th>Campus</th>
                 </tr>
             </thead>
             <tbody>
             <tr>
                 <td>{{result.course_info[0].class_section}}</td>
+                <td>{{result.course_info[0].ssr_component}}</td>
                 <td>{{result.course_info[0].class_nbr}}</td>
+                <td>
+                  <tbody>
+                    <tr>
+                      <td style="width: 10%;" *ngFor = "let day of result.course_info[0].days">{{day}}</td>
+                    </tr>
+                  </tbody>
+                </td>
                 <td>{{result.course_info[0].start_time}}</td>
                 <td>{{result.course_info[0].end_time}}</td>
-                <td>{{result.course_info[0].campus}}</td>
-                <td>{{result.course_info[0].days}}</td>
+                
+                <td>{{result.course_info[0].facility_ID}}</td>
+                
                 <td>{{result.course_info[0].instructors}}</td>
-                <td>{{result.course_info[0].ssr_component}}</td>
+                
                 <td>{{result.course_info[0].enrl_stat}}</td>
                 <td>{{result.course_info[0].descr}}</td>
+                <td>{{result.course_info[0].campus}}</td>
             </tr>
           </tbody>
-        </table>  
+        </table>
+        <br>
+        <br>  
       </div>
       <pagination-controls (pageChange)="p=$event"></pagination-controls>
   </div>

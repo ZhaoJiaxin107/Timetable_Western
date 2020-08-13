@@ -36,6 +36,6 @@ export class HttpService {
 
   search(body):Observable<any>{
     const config = { headers: new HttpHeaders().set('Content-Type','application/json') }
-    return this.http.post<any>(`${this.rootURL}/getSchedule`,body,config)
+    return this.http.post<any>(`${this.rootURL}/getScheduleByAll`,body,config)
   }
 }
