@@ -83,7 +83,8 @@ app.post('/timetable/getSchedule', (req, res) => {
     let defSubjects = []
     ,defCampus = []
     ,defComponent = [];
-  
+    
+    let subjectsResp = {};
     for (let i = 1; i < timeTableInfoJson.subject.length; i++) {
         defSubjects.push(timeTableInfoJson.subject[i].subject_id);
     }
@@ -117,17 +118,11 @@ app.post('/timetable/getSchedule', (req, res) => {
     // search by course code
     if(course_code!="" && subject==""){
         var reg = new RegExp(course_code);
-        let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg));
-        try {
-            res.json({ length: subjectsResp.length,
-                        result: subjectsResp });
-        } catch (err) {
-            res.json({ message: err });
-        }
+        subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg));
     }
     // search by all deault fields
     if(course_code == "" && subject!=""){
-        let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
         &&
         obj.subject.indexOf(filters.subject)!==-1 &&
         obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
@@ -135,43 +130,24 @@ app.post('/timetable/getSchedule', (req, res) => {
         obj.course_info[0].campus.indexOf(filters.campus)!==-1 &&
         obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
         obj.course_info[0].enrl_stat.indexOf(filters.enrl_stat)!==-1
-    )
-    try {
-        res.json({ length: subjectsResp.length,
-                    result: subjectsResp });
-    } catch (err) {
-        res.json({ message: err });
-    }}
+    )}
     // search by all fields and sunject and course_code must match
     if(subject!="" && course_code!=""){
         var reg = new RegExp(course_code);
-        let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg)
+        subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg)
             && obj.subject == subject
         );
-        try {
-            res.json({ length: subjectsResp.length,
-                        result: subjectsResp });
-        } catch (err) {
-            res.json({ message: err });
-        }
     }
     // if select all subject
     if(subject=="" && course_code==""){
         if(filters.campus!=""){
-        let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
         &&
         obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
         obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
         obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
         obj.course_info[0].campus == filters.campus
-        )
-        try {
-            res.json({ length: subjectsResp.length,
-                        result: subjectsResp });
-        } catch (err) {
-            res.json({ message: err });
-        }
-        }
+        )}
         else{
         subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
         &&
@@ -179,13 +155,13 @@ app.post('/timetable/getSchedule', (req, res) => {
         obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
         obj.course_info[0].ssr_component.indexOf(filters.component)!==-1)
         }
-        try {
-            res.json({ length: subjectsResp.length,
+    }
+    try {
+        res.json({ length: subjectsResp.length,
                         result: subjectsResp });
         } catch (err) {
             res.json({ message: err });
         }
-    }
 });
 
 // error handler
