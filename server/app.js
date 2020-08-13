@@ -138,7 +138,7 @@ app.post('/timetable/getSchedule', (req, res) => {
             && obj.subject == subject
         );
     }
-    // if select all subject
+    // if search all of subjects
     if(subject=="" && course_code==""){
         if(filters.campus!=""){
         subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
