@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const fs = require("fs");
+const { match } = require('assert');
+const { result } = require('lodash');
 require('dotenv/config');
 app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:4200' }));
@@ -46,9 +48,38 @@ app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
 })
 
 
+app.get('/timetable/getSchedule/:course_code', function (req, res) {
+    var course_code = String(req.params.course_code);
+    var reg = new RegExp(course_code);
+    let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
+    //console.log(course);
+    try {
+        res.json({ length: course.length,
+                    result: course });
+    } catch (err) {
+        res.json({ message: err });
+    }
+})
+
+
+app.post('/timetable/getScheduleCourseCode', function (req, res) {
+
+    var course_code= req.body.course_code;
+    console.log(course_code);
+    var reg = new RegExp(course_code);
+    let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
+    //console.log(course);
+    try {
+        res.json({ length: course.length,
+                    result: course });
+    } catch (err) {
+        res.json({ message: err });
+    }
+})
+
 
 app.post('/timetable/getSchedule', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     let defSubjects = []
     ,defCampus = []
     ,defComponent = [];
@@ -76,30 +107,52 @@ app.post('/timetable/getSchedule', (req, res) => {
 
     let filters = Object.assign({}, defaults, req.body);
     let checker = (arr, target) => target.some(v => arr.includes(v));
-
-    let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
-        &&
-        filters.subject.includes(obj.subject) &&
-        filters.start_time.includes(obj.course_info[0].start_time.toLowerCase()) &&
-        filters.end_time.includes(obj.course_info[0].end_time.toLowerCase()) &&
-        filters.campus.includes(obj.course_info[0].campus) &&
-        filters.component.includes(obj.course_info[0].ssr_component) &&
-        filters.enrl_stat.includes(obj.course_info[0].enrl_stat)
-    )
-
-    try {
-        res.json({ length: subjectsResp.length,
-                    result: subjectsResp });
-    } catch (err) {
-        res.json({ message: err });
+    
+    var course_code= req.body.course_code;
+    //console.log(course_code);
+    var subject = req.body.subject;
+    console.log(subject);
+    if(course_code!="" && subject==""){
+        var reg = new RegExp(course_code);
+        let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg));
+        try {
+            res.json({ length: subjectsResp.length,
+                        result: subjectsResp });
+        } catch (err) {
+            res.json({ message: err });
+        }
     }
-});
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    if(course_code == ""){
+        let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+            &&
+            obj.subject.indexOf(filters.subject)!==-1 &&
+            obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
+            obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
+            obj.course_info[0].campus.indexOf(filters.campus)!==-1 &&
+            obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
+            obj.course_info[0].enrl_stat.indexOf(filters.enrl_stat)!==-1
+        )
+        try {
+            res.json({ length: subjectsResp.length,
+                        result: subjectsResp });
+        } catch (err) {
+            res.json({ message: err });
+        }
+    }
+
+    if(subject!="" && course_code!=""){
+        var reg = new RegExp(course_code);
+        let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg)
+            && obj.subject == subject
+        );
+        try {
+            res.json({ length: subjectsResp.length,
+                        result: subjectsResp });
+        } catch (err) {
+            res.json({ message: err });
+        }
+    }
 });
 
 // error handler

@@ -26,7 +26,7 @@
     "catalog_description": "The nature and cause of financial security and insecurity; public, private and employer programs and products to reduce financial insecurity, including social security, individual insurance and annuities along with employee pensions and benefits.\n\nExtra Information: 3 lecture hours."
   },
   {
-    "catalog_nbr": 2053,
+    "catalog_nbr": "2053",
     "subject": "ACTURSCI",
     "className": "MATH FOR FINANCIAL ANALYSIS",
     "course_info": [
@@ -379,7 +379,7 @@
       "catalog_description": "Matrix operations, systems of linear equations, linear spaces and transformations, determinants, eigenvalues and eigenvectors, applications of interest to Engineers including diagonalization of matrices, quadratic forms, orthogonal transformations; introduction to MATLAB with applications from linear algebra. \n\nAntirequisite(s): Mathematics 1600A/B. \n\nExtra Information: 3 lecture hours, 2 computer lab or tutorial hours. Restricted to students in the Faculty of Engineering."
     },
     {
-      "catalog_nbr": 1413,
+      "catalog_nbr": "1413",
       "subject": "APPLMATH",
       "className": "APP MATH FOR ENGRS I",
       "course_info": [
@@ -586,7 +586,7 @@
       "catalog_description": "Introduction to numerical analysis; polynomial interpolation, numerical integration, matrix computations, linear systems, nonlinear equations and optimization, the initial value problem. Assignments using a computer and the software package, Matlab, are an important component of this course. \n\nAntirequisite(s): The former Applied Mathematics 2413. \n\nExtra Information:3 lecture hours, 1 laboratory hour."
     },
     {
-      "catalog_nbr": 1030,
+      "catalog_nbr": "1030",
       "subject": "ARABIC",
       "className": "ARABIC FOR BEGINNERS",
       "course_info": [
@@ -611,7 +611,7 @@
       "catalog_description": "For students with no previous knowledge of Arabic, this course introduces spoken and written Modern Standard Arabic with emphasis on the development of communicative skills. Prepares students for progression directly to Arabic 2250. \n\nAntirequisite(s): Grade 12U Arabic and Arabic 1035. \n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 1035,
+      "catalog_nbr": "1035",
       "subject": "ARABIC",
       "className": "BEGINNER ARABIC",
       "course_info": [
@@ -684,7 +684,7 @@
       "catalog_description": "This course builds upon Quranic Arabic for Beginners 1070A/B. The focus is to expand Quranic vocabulary and to acquire a familiarity with more complex grammatical structures through studying Quranic texts. By the end of this course, students will have acquired the key principles of Quranic grammar.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 2250,
+      "catalog_nbr": "2250",
       "subject": "ARABIC",
       "className": "INTERMEDIATE ARABIC",
       "course_info": [
@@ -1038,7 +1038,7 @@
       "catalog_description": "A fourth-year student with a cumulative grade average in the Department of at least 80% may apply for an independent study as one of the half-year courses chosen from the 4000 series. The student must obtain the Undergraduate Chair’s and the supervising professor’s approval before being allowed to register. Students must provide a detailed plan of study as part of the application process."
     },
     {
-      "catalog_nbr": 1021,
+      "catalog_nbr": "1021",
       "subject": "ASTRONOM",
       "className": "GENERAL ASTRONOMY",
       "course_info": [
@@ -1476,7 +1476,7 @@
       "catalog_description": "Students learn business fundamentals in finance, marketing, engineering economics, organizational behaviour and general management. Students are taught business decisionmaking using the case method, wherein students explore real business issues, make management decisions, defend their position, and take action, within an active class environment of no more than 85 students.\n\nAntirequisite(s): Business Administration 1220E or the former Business Administration 1220, Business Administration 2295F/G, Business Administration 2299E or the former Business Administration 2299.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 2257,
+      "catalog_nbr": "2257",
       "subject": "BUSINESS",
       "className": "ACCOUNTING & BUSINESS ANA",
       "course_info": [
@@ -2942,7 +2942,7 @@
       "catalog_description": "An examination of how the fundamentals of energetics influence chemical processes. Topics include: gases, thermodynamics and thermochemistry, chemical equilibria, solubility, weak acids and bases, electrochemistry, and chemical kinetics.\n\nAntirequisite(s): The former Chemistry 1024A/B.\n\nExtra Information: 3 lecture hours, 1.5 laboratory hours (3 hours every other week)."
     },
     {
-      "catalog_nbr": 1150,
+      "catalog_nbr": "1150",
       "subject": "CHINESE",
       "className": "BEGINNERS' CHINESE I",
       "course_info": [
@@ -3183,7 +3183,7 @@
       "catalog_description": "In an interdisciplinary approach, this course will examine major ancient and modern Chinese cities, with a focus on the city's form and function as an aesthetic symbol in Chinese culture, exploring the city's significant role in the making of China's cultural identity.\r\n\r\nExtra Information: 3 hours"
     },
     {
-      "catalog_nbr": 2250,
+      "catalog_nbr": "2250",
       "subject": "CHINESE",
       "className": "BEGINNERS' CHINESE 2",
       "course_info": [
@@ -3330,7 +3330,7 @@
       "catalog_description": "This course is intended for students who can read and write Modern Standard Chinese. Students will study business terms, communication styles and formats, and acquire linguistic and cultural knowledge for conducting business in Chinese. Students will develop competence through practical experience in reading and writing market reports and analysing contracts. \n\nExtra Information: 4 hours"
     },
     {
-      "catalog_nbr": 3350,
+      "catalog_nbr": "3350",
       "subject": "CHINESE",
       "className": "CHINESE 3",
       "course_info": [
@@ -3619,7 +3619,7 @@
       "catalog_description": "A consolidation of the analysis and design of statically determinate structures, and an introduction to the analysis of indeterminate structures. Analysis and design of statically determinate beams and frames; bending of unsymmetric sections; virtual work and energy methods, introduction to indeterminate structural analysis. \n\nExtra Information: 3 lecture hours, 1 laboratory hour, 1 tutorial hour."
     },
     {
-      "catalog_nbr": 2224,
+      "catalog_nbr": "2224",
       "subject": "CEE",
       "className": "ENGINEERING FLUID MECHANICS",
       "course_info": [
@@ -3882,7 +3882,7 @@
       "catalog_description": "Introduction to reinforced concrete design including serviceability and ultimate limit states; analysis and design of reinforced concrete beams and one-way slabs for flexure and shear; bar cutoffs in flexural members; deflections; short columns.\n\nExtra Information: 3 lecture hours, 3 tutorial/laboratory hours."
     },
     {
-      "catalog_nbr": 1000,
+      "catalog_nbr": "1000",
       "subject": "CLASSICS",
       "className": "ANCIENT GREECE AND ROME",
       "course_info": [
@@ -3908,7 +3908,7 @@
       "catalog_description": "An introduction to the ancient world, with emphasis on the cultural and social life and achievements of Greece and Rome. Among the topics to be considered are: magic, religion, philosophy, literature, archaeology, architecture, art, the structure of society and the position of women, slavery, everyday life, law, sport, warfare, medicine. \n\nExtra Information: 3 lecture hours."
     },
     {
-      "catalog_nbr": 2200,
+      "catalog_nbr": "2200",
       "subject": "CLASSICS",
       "className": "CLASSICAL MYTHOLOGY",
       "course_info": [
@@ -3932,7 +3932,7 @@
       "catalog_description": "A study of Greek and Roman mythology, with some reference to its influence in modern European literature. \n\nExtra Information: 2 lecture hours."
     },
     {
-      "catalog_nbr": 2300,
+      "catalog_nbr": "2300",
       "subject": "CLASSICS",
       "className": "SPORT&RECREATION ANCIENT WRLD",
       "course_info": [
@@ -4589,7 +4589,7 @@
       "catalog_description": "The study of human hearing from acoustics to the physiological and psychological correlates of sound. Topics include physical acoustics, anatomy, physiology, sensitivity, masking, loudness, pitch, binaural phenomena, and auditory streams. Course activities provide experience in acoustical calculations and psychoacoustic experimentation and data analysis. \n\nExtra Information: 3 lecture hours, 1 laboratory/tutorial hour."
     },
     {
-      "catalog_nbr": 1060,
+      "catalog_nbr": "1060",
       "subject": "COMPLIT",
       "className": "BACK TO THE FUTURE",
       "course_info": [
@@ -6453,7 +6453,7 @@
       "catalog_description": "Designing, implementing and testing computer programs using Java and MATLAB to fulfill given specifications for small problems using sound engineering principles and processes. Awareness of the engineering aspects of the process of constructing a computer program.\n\nAntirequisite(s): Computer Science 1025A/B, Computer Science 1026A/B. \n\nExtra Information: 3 lecture hours, 2 laboratory hours."
     },
     {
-      "catalog_nbr": 1050,
+      "catalog_nbr": "1050",
       "subject": "ENGSCI",
       "className": "FOUNDATIONS OF ENG PRACTICE",
       "course_info": [
@@ -6757,7 +6757,7 @@
       "catalog_description": "The FIMS Internship is a for-credit internship for up to four months, or a minimum of 140 hours. The internship will require students to make connections with academic study while undertaking supervised duties in organizations and businesses with media-related or information-related interests, public service organizations, and community groups. \n\nExtra Information: Pass/Fail.\nThe student is required to a) complete an Internship Experience Proposal b) submit three reflection papers c) complete an internship project and portfolio, demonstrating how the experience gained through the internship relates to his/her degree coursework and d) maintain a satisfactory level of performance in the position as verified by the employer through evaluations."
     },
     {
-      "catalog_nbr": 1022,
+      "catalog_nbr": "1022",
       "subject": "FILM",
       "className": "INTRODUCTION TO FILM STUDIES",
       "course_info": [
@@ -7493,7 +7493,7 @@
       "catalog_description": "A study of the scientific principles relating to foods and their preparation with emphasis on nutritional concepts in food preparation. An experimental approach will demonstrate the principles and methods of food preparation. \n \nExtra Information: 2 lecture hours, 2 laboratory hours."
     },
     {
-      "catalog_nbr": 2232,
+      "catalog_nbr": "2232",
       "subject": "FOODNUTR",
       "className": "PRINCIPLES OF FOOD SCI",
       "course_info": [
@@ -7748,7 +7748,7 @@
       "catalog_description": "Introduction to the profession of nutrition and dietetics, medical nutrition therapy and the nutrition care process including modifications of regular diets to meet special nutritional needs, menu planning and documentation of nutritional care. \n \nExtra Information: 3 lecture hours, 3 tutorial hours."
     },
     {
-      "catalog_nbr": 1100,
+      "catalog_nbr": "1100",
       "subject": "GEOGRAPH",
       "className": "FUNDAMENTALS OF GEOGRAPHY",
       "course_info": [
@@ -8395,7 +8395,7 @@
       "catalog_description": "This course introduces students to principled leadership as a foundation for decision-making and evaluation. A theory-to-practice approach is applied providing a coherent framework for action, taking into account authority, power, influence, followership, competencies, personality, role, and citizenship. Students learn diagnostic tools for analysis, constituent responsibilities, and strategic action.\n\nAntirequisite(s): Dimensions of Leadership 1000A/B, Dimensions of Leadership 1031.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1000,
+      "catalog_nbr": "1000",
       "subject": "GREEK",
       "className": "INTRODUCTORY ANCIENT GREEK",
       "course_info": [
@@ -8471,7 +8471,7 @@
       "catalog_description": "A continuation of the study of biblical Greek grammar and syntax, with an emphasis on the acquisition of basic reading skills for studying the Septuagint or New Testament.\n\nAntirequisite(s): the former Religious Studies 1029; Greek 5104A/B.\n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 2000,
+      "catalog_nbr": "2000",
       "subject": "GREEK",
       "className": "ADVANCED ANCIENT GREEK",
       "course_info": [
@@ -8747,7 +8747,7 @@
       "catalog_description": "Personal resilience is widely recognized to be a cornerstone of wellbeing, and is considered essential to success in environments ranging from schools to workplaces. In this interdisciplinary course, we study “good vs poor” mental health, cultivation of resilience, creation and maintenance of wellbeing, and living well with compromised mental health. \n\nExtra Information: 3 contact hours.\nNotes: This course may be used as a 2000-level elective course within any of the modular offerings within the School of Health Studies."
     },
     {
-      "catalog_nbr": 2244,
+      "catalog_nbr": "2244",
       "subject": "HEALTSCI",
       "className": "WOMEN AND HEALTH",
       "course_info": [
@@ -8913,7 +8913,7 @@
       "catalog_description": "This course will explore the physical, social, psychological, and spiritual determinates of health from the prenatal period to early adulthood. The focus will be on health applications of developmental concepts, and emphasis will be placed on contemporary issues affecting health.\n \nAntirequisite(s): Kinesiology 3347A/B.\n\nExtra Information: 2 lecture hours, 1 tutorial."
     },
     {
-      "catalog_nbr": 1020,
+      "catalog_nbr": "1020",
       "subject": "HEBREW",
       "className": "INTRO TO MODERN HEBREW LANG",
       "course_info": [
@@ -8988,7 +8988,7 @@
       "catalog_description": "Continuation of Hebrew 1040A/B. An introduction to the grammar of Biblical Hebrew for those with little previous knowledge of the language. Special attention will be paid to forms of the verb. \n \nAntirequisite(s): Hebrew 1030 or Grade 6 Hebrew (or Grade 3 in Israel).\n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 2200,
+      "catalog_nbr": "2200",
       "subject": "HEBREW",
       "className": "HEBREW 2",
       "course_info": [
@@ -9037,7 +9037,7 @@
       "catalog_description": "Reading, translating, and analyzing the grammar of selected prose passages from the Hebrew Bible with the aid of a lexicon. \n\nAntirequisite(s): Grade 7 Hebrew (or Grade 4 in Israel).\n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 3300,
+      "catalog_nbr": "3300",
       "subject": "HEBREW",
       "className": "ADV. MODERN HEBREW LANGUAGE",
       "course_info": [
@@ -9160,7 +9160,7 @@
       "catalog_description": "A general historical survey of ideas in the physical and biological sciences from antiquity to the twentieth century. This course will also examine issues in scientific methodology as well as the impact of scientific ideas on society.\n\nAntirequisite(s) at Huron campus: Philosophy 2203E.\n\nExtra Information: 3 lecture hours (Main); 2 lecture hours (Huron)."
     },
     {
-      "catalog_nbr": 2220,
+      "catalog_nbr": "2220",
       "subject": "HISTSCI",
       "className": "INTRO TO HISTORY OF MEDICINE",
       "course_info": [
@@ -9486,7 +9486,7 @@
       "catalog_description": "An interdisciplinary survey of Indigenous issues, from academic and community perspectives including indigenous knowledge, historical background, oral history, socio-political context, arts, language and culture. Specific practical examples will be explored by researchers and community members actually engaged in their contemporary documentation and resolution. \n\nExtra Information: 2 lecture hours, 1 tutorial hour."
     },
     {
-      "catalog_nbr": 2104,
+      "catalog_nbr": "2104",
       "subject": "INDIGSTU",
       "className": "INTRODUCTORY MOHAWK LANGUAGE",
       "course_info": [
@@ -10042,7 +10042,7 @@
       "catalog_description": "The Academic Internship is a 0.5 credit internship with a minimum of 60 hours. The internship will require students to make connections with academic study while undertaking supervised duties in organizations, businesses, or community groups with interests related to Intercultural Communication.\n\nExtra Information: Pass or Fail.\nStudents accepted for an internship will arrange individual programs with supervising faculty. The student is required to a) maintain a suitable level of performance in the position as verified by the employer through evaluations and b) submit a mid-term as well as a final report, demonstrating how the experience gained through the internship relates to his/her coursework and program of study."
     },
     {
-      "catalog_nbr": 1030,
+      "catalog_nbr": "1030",
       "subject": "ITALIAN",
       "className": "ITALIAN FOR BEGINNERS",
       "course_info": [
@@ -10109,7 +10109,7 @@
       "catalog_description": "Discover the unique contribution that Italians have made to the Canadian society with a special focus on your communities. Collect stories from old and new immigrants with a view of building an archive devoted to the Italian experience in Canada. Explore issues of assimilation, integration, and identity.\n\nExtra information: 2 hours. Online course. Taught in English. Coursework in English. Some course work in Italian for Italian program students only."
     },
     {
-      "catalog_nbr": 2200,
+      "catalog_nbr": "2200",
       "subject": "ITALIAN",
       "className": "INTERMEDIATE ITALIAN",
       "course_info": [
@@ -10272,7 +10272,7 @@
       "catalog_description": "This course, held mainly in Tuscany at Rondine Citadel of Peace, builds skills for understanding cultural differences and fosters awareness for social change in a global context. Intercultural competences, migration phenomena and peacebuilding will be approached in theory and practice through field experience as well as visual and written material.\n\nExtra Information: 3 hours.\nTaught in English. The course takes place in Italy during Intersession. See Department for information on application procedure."
     },
     {
-      "catalog_nbr": 3300,
+      "catalog_nbr": "3300",
       "subject": "ITALIAN",
       "className": "ADVANCED ITALIAN",
       "course_info": [
@@ -10389,7 +10389,7 @@
       "catalog_description": "Please consult the Department for current offerings. \n \nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1036,
+      "catalog_nbr": "1036",
       "subject": "JAPANESE",
       "className": "JAPANESE FOR BEGINNERS",
       "course_info": [
@@ -10414,7 +10414,7 @@
       "catalog_description": "An intensive introduction to spoken and written Japanese with emphasis on the development of communicative skills. Intended for students with little or no previous knowledge of Japanese. Prepares students for progression to Japanese 2260. Note that students who have successfully completed Grade 12 U Japanese or equivalent cannot take this course for credit.\n \nAntirequisite(s): Grade 12 U Japanese, or Japanese 1050, Japanese 1051A/B, Japanese 1052A/B. \n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 1050,
+      "catalog_nbr": "1050",
       "subject": "JAPANESE",
       "className": "JAPANESE I",
       "course_info": [
@@ -10463,7 +10463,7 @@
       "catalog_description": "A multi-disciplinary overview of Japan. Contents include territory, people, language, religion, economy, popular culture, science and technology, among others. Students investigate - and formulate questions - on Japan and East Asia within today's globalized world, identify their own cultural bias toward less familiar subjects, and critically evaluate diverse perspectives. Taught in English.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 2250,
+      "catalog_nbr": "2250",
       "subject": "JAPANESE",
       "className": "JAPANESE 2",
       "course_info": [
@@ -10488,7 +10488,7 @@
       "catalog_description": "Builds on skills in reading and speaking Japanese developed in earlier courses. This course bridges between the elementary and intermediate level. Students gain increased vocabulary and familiarity with more extensive grammatical structures and will be able to communicate in Japanese regarding non-specialized topics. \n\nAntirequisite(s): Japanese 2260.\n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 2260,
+      "catalog_nbr": "2260",
       "subject": "JAPANESE",
       "className": "INTRMEDIATE JAPANESE",
       "course_info": [
@@ -10537,7 +10537,7 @@
       "catalog_description": "A survey of the artistic, philosophical, and religious factors that shape modern Japan. Taught in English.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 3350,
+      "catalog_nbr": "3350",
       "subject": "JAPANESE",
       "className": "JAPANESE 3",
       "course_info": [
@@ -10774,7 +10774,7 @@
       "catalog_description": "Topics selected by the instructor. Consult the Department of French and Asian Studies.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 4450,
+      "catalog_nbr": "4450",
       "subject": "JAPANESE",
       "className": "JAPANESE 4",
       "course_info": [
@@ -11096,7 +11096,7 @@
       "catalog_description": "The physiological basis of muscular exercise and training. The course will examine metabolic, cardiorespiratory and muscular adaptations to acute and chronic exercise.\n\nExtra Information: 3 lecture hours, 3 laboratory hours biweekly."
     },
     {
-      "catalog_nbr": 1000,
+      "catalog_nbr": "1000",
       "subject": "LATIN",
       "className": "INTRODUCTORY LATIN",
       "course_info": [
@@ -11122,7 +11122,7 @@
       "catalog_description": "An introduction course in Latin covering major points of grammar and syntax.\n\nAntirequisite(s): Those students with Grade 12U level Latin must consult the Department before registering for this course. \n\nExtra Information: 3 lecture hours."
     },
     {
-      "catalog_nbr": 2000,
+      "catalog_nbr": "2000",
       "subject": "LATIN",
       "className": "ADVANCED LATIN",
       "course_info": [
@@ -11298,7 +11298,7 @@
       "catalog_description": "An introduction to various aspects of the study of leadership, with an emphasis on the theory and practice of leadership.\n\nAntirequisite(s): Leadership Studies 1031, the former Dimensions of Leadership 1000A/B, the former Dimensions of Leadership 1031\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1031,
+      "catalog_nbr": "1031",
       "subject": "LS",
       "className": "EXPLORING LEADERSHIP",
       "course_info": [
@@ -12493,7 +12493,7 @@
       "catalog_description": "An introduction to Canadian business law, including: tort law, contracts, property, employment, partnerships, corporations, debtor and creditor, bankruptcy and insolvency, sale of goods and consumer protection. Cases and current events are used to illustrate legal issues and to solve legal problems. \n\nAntirequisite(s): Business Administration 4450A/B, Law 5510A/B, Law 5210A/B. \n\nExtra Information: 3 lecture hours."
     },
     {
-      "catalog_nbr": 1052,
+      "catalog_nbr": "1052",
       "subject": "MTP-MKTG",
       "className": "SPECIAL TOPICS",
       "course_info": [
@@ -13506,7 +13506,7 @@
       "catalog_description": "Major research project and weekly seminar course for the Honours Specialization in Medical Health Informatics. Includes: i) theory and practice of research methodology and critical appraisal of research literature, ii) an independent research project supervised by faculty, and iii) preparation of a research proposal and final written research project report.\n\nExtra Information: Minimum 12 laboratory hours per week plus 3 seminar hours per week."
     },
     {
-      "catalog_nbr": 1022,
+      "catalog_nbr": "1022",
       "subject": "MEDIEVAL",
       "className": "INTRO TO MEDIEVAL STUDIES",
       "course_info": [
@@ -13530,7 +13530,7 @@
       "catalog_description": "This course will introduce civilization and thought in Europe and the Mediterranean between 400 and 1500, with emphasis on the medieval roots of many modern institutions and attitudes, including philosophy, technology, law, governance, courtly love and attitudes to women, warfare, art and archaeology, Christianity and Islam, literature, music and coinage.\n \nAntirequisite(s): Medieval Studies 1025A/B, Medieval Studies 1026A/B, and the former Medieval Studies 1020E. \n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1017,
+      "catalog_nbr": "1017",
       "subject": "MTP-MMED",
       "className": "SPECIAL TOPICS",
       "course_info": [
@@ -13552,7 +13552,7 @@
       "catalog_description": ""
     },
     {
-      "catalog_nbr": 1020,
+      "catalog_nbr": "1020",
       "subject": "MTP-MMED",
       "className": "SPECIAL TOPICS",
       "course_info": [
@@ -13905,7 +13905,7 @@
       "catalog_description": "Basic theory and analysis of tonal music. Topics covered include diatonic harmony and voice leading, the concept and practice of tonality, basic tonicization and modulation, and an introduction to musical form.\n\nExtra Information: 2 lecture hours, 1 tutorial hour."
     },
     {
-      "catalog_nbr": 2000,
+      "catalog_nbr": "2000",
       "subject": "NEURO",
       "className": "INTRO TO NEUROSCIENCE",
       "course_info": [
@@ -14163,7 +14163,7 @@
       "catalog_description": ""
     },
     {
-      "catalog_nbr": 1030,
+      "catalog_nbr": "1030",
       "subject": "PERSIAN",
       "className": "PERSIAN (FARSI) FOR BEGINNERS",
       "course_info": [
@@ -14188,7 +14188,7 @@
       "catalog_description": "Introduction of oral and written Persian for students with little or no previous knowledge of the language. Develop your communicative skills while learning about the cultures of the Persian-speaking countries.\n\nAntirequisite(s): Grade 12U Persian (Farsi), Persian 1035.\n\nExtra Information: 4 hours."
     },
     {
-      "catalog_nbr": 1035,
+      "catalog_nbr": "1035",
       "subject": "PERSIAN",
       "className": "BEGINNER PERSIAN HRTGE SPEAKER",
       "course_info": [
@@ -14235,7 +14235,7 @@
       "catalog_description": "A course for students in the BSc in Nursing and other Health Sciences programs as well as students in BMSc and BSc programs, to provide a basic understanding of the fundamentals of drug action and the mechanisms of action and therapeutic use of the important classes of drugs.\n\nAntirequisite(s): Pharmacology 3620. \n\n Extra Information: 1 tutorial hour (optional). Only offered online (Distance Studies)."
     },
     {
-      "catalog_nbr": 3620,
+      "catalog_nbr": "3620",
       "subject": "PHARM",
       "className": "HUMAN PHARM & THERAPEUTIC PRNC",
       "course_info": [
@@ -14444,7 +14444,7 @@
       "catalog_description": "A course dealing with the pharmacological and toxicological principles underlying the adverse effects of xenobiotics in humans. In addition to reviewing mechanisms of toxicity in humans, the course will include overviews of the principles of management of human poisoning, the principles of chronic toxicity and of drug safety in humans.\n\nExtra Information: 2 lecture hours."
     },
     {
-      "catalog_nbr": 5001,
+      "catalog_nbr": "5001",
       "subject": "PHILST",
       "className": "THOMISTIC PHIL FOR THEOLOGIANS",
       "course_info": [
@@ -14466,7 +14466,7 @@
       "catalog_description": ""
     },
     {
-      "catalog_nbr": 1020,
+      "catalog_nbr": "1020",
       "subject": "PHILOSOP",
       "className": "INTRO TO PHILOSOPHY",
       "course_info": [
@@ -14640,7 +14640,7 @@
       "catalog_description": "Apparently simple conceptions sometimes especially capture our imagination. Examples: Descartes's \"I think, therefore I am,\" McLuhan's \"the medium is the message,\" or Plato's theory of forms. The course examines a great number of these simple ideas that are also the Big Ideas that no educated person should be ignorant of. \n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1200,
+      "catalog_nbr": "1200",
       "subject": "PHILOSOP",
       "className": "CRITICAL THINKING",
       "course_info": [
@@ -14759,7 +14759,7 @@
       "catalog_description": "A survey of selected philosophical problems in the areas of ethics and political/legal philosophy, with reference to works of both classical and contemporary philosophers. Specimen topics include ethical relativism, freedom and determinism, anarchy and government, and the justification of punishment. Primarily for first year students. \n\nAntirequisite(s): Philosophy 1100E, Philosophy 1300E.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 1030,
+      "catalog_nbr": "1030",
       "subject": "PORTUGSE",
       "className": "PORTUGUESE FOR BEGINNERS",
       "course_info": [
@@ -15306,7 +15306,7 @@
       "catalog_description": "This course explores different social institutions and the dynamics of social change. Topics include the sociological perspective and research techniques, families, education, religion, health, mass media, aging, the economy and work, population, collective behaviour, and urbanization.\n\nAntirequisite(s): Sociology 0012.\n\nExtra Information: For students registered in the Preliminary Year program only."
     },
     {
-      "catalog_nbr": 1020,
+      "catalog_nbr":"1020",
       "subject": "SOCIOLOG",
       "className": "INTRO SOCIOLOGY",
       "course_info": [
@@ -15713,7 +15713,7 @@
       "catalog_description": "This course introduces academic speaking and listening skills to international students through readings and speech manuscripts in order to develop oral communication skills. Students are expected to speak frequently and improve their skills of writing and presenting effective speeches. \n\nExtra Information: 8 class/lecture hours, 2 tutorial hours."
     },
     {
-      "catalog_nbr": 2001,
+      "catalog_nbr": "2001",
       "subject": "SPEECH",
       "className": "FORMS OF ORAL DISCOURSE",
       "course_info": [
@@ -15879,7 +15879,7 @@
       "catalog_description": "Statistical inference, experimental design, sampling design, confidence intervals and hypothesis tests for means and proportions, regression and correlation.\n\nAntirequisite(s): All other courses or half courses in Introductory Statistics, except Statistical Sciences 1023A/B and Statistical Sciences 2037A/B.\n\nExtra Information: Offered in two formats: 3 lecture hours, or weekly online lectures and 2 in-class lab hours (Main); 3 lecture hours (Huron, King's).\n\nNote also that Statistical Sciences 1024A/B cannot be taken concurrently with any Introductory Statistics course. For a full list of Introductory Statistics courses please see: http://www.westerncalendar.uwo.ca/Departments.cfm?DepartmentID=55&SelectedCalendar=Live &ArchiveID=."
     },
     {
-      "catalog_nbr": 2035,
+      "catalog_nbr": "2035",
       "subject": "STATS",
       "className": "STATISTICS FOR BUS & SOC SCI",
       "course_info": [
@@ -16055,7 +16055,7 @@
       "catalog_description": "An introductory course in the application of statistical methods, intended for honours students in departments other than Statistical and Actuarial Sciences, Applied Mathematics, Mathematics, or students in the Faculty of Engineering. Topics include sampling, confidence intervals, analysis of variance, regression and correlation. Cannot be taken for credit in any module in Data Science, Statistics, Actuarial Science, or Financial Modelling other than the Minor in Applied Statistics.\n\nAntirequisite(s): All other courses in Introductory Statistics (except Statistical Sciences 1023A/B, Statistical Sciences 1024A/B): Biology 2244A/B, Economics 2122A/B, Economics 2222A/B, Geography 2210A/B, Health Sciences 3801A/B,MOS 2242A/B, Psychology 2810, Psychology 2820E, Psychology 2830A/B, Psychology 2850A/B, Psychology 2851A/B, Social Work 2207A/B, Sociology 2205A/B, Statistical Sciences 2035, Statistical Sciences 2141A/B, Statistical Sciences 2143A/B, Statistical Sciences 2858A/B, Statistical Sciences 2037A/B if taken prior to Fall 2010, former Psychology 2885 (Brescia), former Statistical Sciences 2122A/B, former Social Work 2205.\n\nExtra Information: 2 lecture hours, 3 lab hours."
     },
     {
-      "catalog_nbr": 1601,
+      "catalog_nbr": "1601",
       "subject": "SA",
       "className": "FOUNDATIONS OF VISUAL ARTS",
       "course_info": [
@@ -16079,7 +16079,7 @@
       "catalog_description": "A studio course designed to introduce students to techniques and processes of two-dimensional and three-dimensional media; the theoretical concepts which inform and direct studio practice will be emphasized.\n\nAntirequisite(s): Studio Art 1605, the former VAS 1020, the former VAS 1025.\n\nExtra Information: 1 lecture hour and 3 studio lab hours. \n\nNote: No Visual Arts portfolio required. Some sessions may involve drawing from the nude (female or male) as a required component of the course. For Studio Art 1601 and Studio Art 1605 only, students may request an alternate component."
     },
     {
-      "catalog_nbr": 1605,
+      "catalog_nbr": "1605",
       "subject": "SA",
       "className": "ADV VIS ARTS FOUNDATN STUDIO",
       "course_info": [
@@ -16417,7 +16417,7 @@
       "catalog_description": "A studio/theory seminar required for students in the third year of the Honours Specialization in Studio Arts. As a forum for engagement with methods and practices of professional artists it will help students prepare for the portfolio review required for entry into SA 4605 Practicum. \n\nAntirequisite(s): the former VAS 3382A/B.\n\nExtra Information: 4 seminar/studio hours."
     },
     {
-      "catalog_nbr": 3611,
+      "catalog_nbr": "3611",
       "subject": "SA",
       "className": "DRAWING",
       "course_info": [
@@ -16441,7 +16441,7 @@
       "catalog_description": "Continuation of drawing as perceptual, technical, conceptual and critical problem solving and as a basis for exploration with other media and disciplines.\n\nAntirequisite(s): the former VAS 3300.\n\nExtra Information: 4 studio hours.\nNote: Some sessions may involve drawing from the nude (female or male) as a required component of the course. Priority will be given to students registered in a Visual Arts program."
     },
     {
-      "catalog_nbr": 3623,
+      "catalog_nbr": "3623",
       "subject": "SA",
       "className": "PAINTING",
       "course_info": [
@@ -16465,7 +16465,7 @@
       "catalog_description": "A continuation of the study of painting. \n\nAntirequisite(s): the former VAS 3310.\n\nExtra Information: 4 studio hours.\nNote: Some sessions may involve drawing from the nude (female or male) as a required component of the course. Priority will be given to students registered in a Visual Arts program."
     },
     {
-      "catalog_nbr": 3633,
+      "catalog_nbr": "3633",
       "subject": "SA",
       "className": "PRINT MEDIA",
       "course_info": [
@@ -16489,7 +16489,7 @@
       "catalog_description": "A continuation of the study of print media. \n\nAntirequisite(s): Studio Art 3630A/B, Studio Art 3632A/B, the former VAS 3330. \n\nExtra Information: 4 studio hours.\nPriority will be given to students registered in the Visual Arts program."
     },
     {
-      "catalog_nbr": 3653,
+      "catalog_nbr": "3653",
       "subject": "SA",
       "className": "PHOTOGRAPHY",
       "course_info": [
@@ -16561,7 +16561,7 @@
       "catalog_description": "A Studio/Theory course focusing upon digital video production offering experience in the areas of camerawork, lighting, sound and advanced video editing techniques. Creative explorations include single-channel work, video installation, multiscreen video as well as on-line production and interactivity. This course will also examine the historical evolution of the moving image.\n\nAntirequisite(s): Studio Art 3663, the former VAS 3350, the former VAS 3356A/B.\n\nExtra Information: 4 studio hours.\nPriority will be given to students registered in the Visual Arts program."
     },
     {
-      "catalog_nbr": 4603,
+      "catalog_nbr": "4603",
       "subject": "SA",
       "className": "EXPERIENTIAL LEARNING",
       "course_info": [
@@ -16583,7 +16583,7 @@
       "catalog_description": "The course offers BFA students the opportunity for studio visits of established artists, field trips to galleries in and outside London, the coordinating and organizing of exhibitions, artists' talks, high school presentations, etc. It is specifically intended to round out the in-studio practice taught in SA 4605."
     },
     {
-      "catalog_nbr": 4605,
+      "catalog_nbr": "4605",
       "subject": "SA",
       "className": "PRACTICUM",
       "course_info": [
@@ -17186,7 +17186,7 @@
       "catalog_description": "An examination of principled reasoning in classical Islamic jurisprudence, the theological status of reason in Islam, the principles and priorities of traditional ethical reasoning, the arguments for a goal-oriented approach to ethics, the contemporary emphasis on the context of the ethicist and the construction of religious authority, and the importance of individual moral formation.\n\nExtra Information: 3 hours."
     },
     {
-      "catalog_nbr": 5299,
+      "catalog_nbr": "5299",
       "subject": "THESIS",
       "className": "THEOLOGICAL STUDIES THESIS",
       "course_info": [
