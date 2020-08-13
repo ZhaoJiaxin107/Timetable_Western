@@ -25,7 +25,8 @@
                         name="course_number"                          
                         placeholder="eg. 1001"
                         (change)=getCourse($event.target.name,$event)
-                        class = "courseselect">
+                        class = "courseselect"
+                        autocomplete="off">
                       </div>
 
                       <div class="search">
@@ -109,15 +110,15 @@
       </form>
   </div>
   <br>
+  <div class = "line"></div>
   <div class="result-container" id="result-container">
-  
+      <br>
       <div id="result">{{resultLengthStr}}</div>
       <br>
       <br>
       <input type="text" [(ngModel)] = "className" (input) = "Search()" placeholder="Search by Class Name" class="s1" id="s1"/>
       <div *ngFor = "let result of courseResult | paginate:{itemsPerPage:5,currentPage:p}" class="course">
-          <h3>Catalog Number:{{result.catalog_nbr}}</h3>
-          <h3>Class Name: {{result.className}}</h3>
+          <h3>{{result.subject}}&nbsp;{{result.catalog_nbr}}:&nbsp;&nbsp;{{result.className}}</h3>
           <p><strong>Course Description:</strong> 
             {{result.catalog_description}}</p>
           <table class="pure-table pure-table-bordered">

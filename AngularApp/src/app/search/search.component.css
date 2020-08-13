@@ -61,6 +61,19 @@ margin-right: 150px;
 margin-left: 120px;
 overflow: auto;
 }
+.line{
+  width: 100%;
+  height: 1px;
+  border-top:2px solid #ddd;
+  text-align: center;
+  margin-top: 5px;
+}
+line span{
+  position: relative;
+  top: -8px;
+  background: #fff;
+  padding: 0 20px;
+}
 #result{
 position: absolute;
 left: 30px;
