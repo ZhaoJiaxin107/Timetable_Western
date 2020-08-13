@@ -125,6 +125,10 @@ export class SearchComponent implements OnInit {
     } 
     this.searchForm.value.course_number = this.selectedCourse;
     console.log(this.searchForm.value.course_number);
+    this.getAll();
+  }
+
+  getAll(){
     const body=JSON.stringify(this.searchForm.value);
     console.log(body);
     this._http.search(body).subscribe(res =>{
