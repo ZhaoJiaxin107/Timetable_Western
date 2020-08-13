@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 const fs = require("fs");
 const { match } = require('assert');
-const { result } = require('lodash');
+const { result, filter } = require('lodash');
 require('dotenv/config');
 app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:4200' }));
@@ -93,7 +93,7 @@ app.post('/timetable/getSchedule', (req, res) => {
     for (let k = 1; k < timeTableInfoJson.Component.length; k++) {
         defComponent.push(timeTableInfoJson.Component[k].Component_id);
     }
-
+    console.log(defCampus);
     const defaults = {
         subject: defSubjects,
         start_time: timeTableInfoJson.start_time,
@@ -111,7 +111,11 @@ app.post('/timetable/getSchedule', (req, res) => {
     var course_code= req.body.course_number;
     //console.log(course_code);
     var subject = req.body.subject;
-    console.log(subject);
+    /*for(var k=0;k<timeTableJson.length;k++){
+        console.log(timeTableJson[k].course_info[0].campus);
+    }*/
+
+    // search by course code
     if(course_code!="" && subject==""){
         var reg = new RegExp(course_code);
         let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg));
@@ -122,7 +126,7 @@ app.post('/timetable/getSchedule', (req, res) => {
             res.json({ message: err });
         }
     }
-
+    // search by all deault fields
     if(course_code == "" && subject!=""){
         let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
             &&
@@ -140,7 +144,7 @@ app.post('/timetable/getSchedule', (req, res) => {
             res.json({ message: err });
         }
     }
-
+    // search by all fields and sunject and course_code must match
     if(subject!="" && course_code!=""){
         var reg = new RegExp(course_code);
         let subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg)
@@ -153,16 +157,36 @@ app.post('/timetable/getSchedule', (req, res) => {
             res.json({ message: err });
         }
     }
-
+    // if select all subject
     if(subject=="" && course_code==""){
+        if(filters.campus!=""){
         let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
-    )
-    try {
-        res.json({ length: subjectsResp.length,
-                    result: subjectsResp });
-    } catch (err) {
-        res.json({ message: err });
-    }
+        &&
+        obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
+        obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
+        obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
+        obj.course_info[0].campus == filters.campus
+        )
+        try {
+            res.json({ length: subjectsResp.length,
+                        result: subjectsResp });
+        } catch (err) {
+            res.json({ message: err });
+        }
+        }
+        else{
+        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+        &&
+        obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
+        obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
+        obj.course_info[0].ssr_component.indexOf(filters.component)!==-1)
+        }
+        try {
+            res.json({ length: subjectsResp.length,
+                        result: subjectsResp });
+        } catch (err) {
+            res.json({ message: err });
+        }
     }
 });
 
