@@ -49,7 +49,7 @@ app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
 
 
 app.get('/timetable/getSchedule/:course_code', function (req, res) {
-    var course_code = String(req.params.course_code);
+    var course_code = String(req.params.course_number);
     var reg = new RegExp(course_code);
     let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
     //console.log(course);
@@ -64,7 +64,7 @@ app.get('/timetable/getSchedule/:course_code', function (req, res) {
 
 app.post('/timetable/getScheduleCourseCode', function (req, res) {
 
-    var course_code= req.body.course_code;
+    var course_code= req.body.course_number;
     console.log(course_code);
     var reg = new RegExp(course_code);
     let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
@@ -108,7 +108,7 @@ app.post('/timetable/getSchedule', (req, res) => {
     let filters = Object.assign({}, defaults, req.body);
     let checker = (arr, target) => target.some(v => arr.includes(v));
     
-    var course_code= req.body.course_code;
+    var course_code= req.body.course_number;
     //console.log(course_code);
     var subject = req.body.subject;
     console.log(subject);
@@ -123,7 +123,7 @@ app.post('/timetable/getSchedule', (req, res) => {
         }
     }
 
-    if(course_code == ""){
+    if(course_code == "" && subject!=""){
         let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
             &&
             obj.subject.indexOf(filters.subject)!==-1 &&
@@ -152,6 +152,17 @@ app.post('/timetable/getSchedule', (req, res) => {
         } catch (err) {
             res.json({ message: err });
         }
+    }
+
+    if(subject=="" && course_code==""){
+        let subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+    )
+    try {
+        res.json({ length: subjectsResp.length,
+                    result: subjectsResp });
+    } catch (err) {
+        res.json({ message: err });
+    }
     }
 });
 

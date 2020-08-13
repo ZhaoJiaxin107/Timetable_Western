@@ -15,7 +15,17 @@
                           <option ng-model="subject" *ngFor="let x of subject" value="{{x.subject_id}}">
                             {{x.subject_value}}
                           </option>
-                        </select><br>
+                        </select>
+                      </div>
+
+                      <div class="search">
+                        <label>Course Number:</label>
+                        <input 
+                        formControlName = "course_number"
+                        name="course_number"                          
+                        placeholder="eg. 1001"
+                        (change)=getCourse($event.target.name,$event)
+                        class = "courseselect">
                       </div>
 
                       <div class="search">
@@ -37,6 +47,8 @@
                       </select><br>
                       </div>
                       
+                    </div>                      
+                    <div class="colright">
                       <div class="search">
                         <label>Campus:</label>
                         <select name="campus" formControlName="campus">
@@ -45,8 +57,6 @@
                           </option>
                         </select><br>
                       </div>
-                    </div>                      
-                    <div class="colright">
                       <div class="search">
                         <label>Starting Time:</label>
                         <select name="start_time" formControlName="start_time">
@@ -100,6 +110,7 @@
       <br>
       <input type="text" [(ngModel)] = "className" (input) = "Search()" placeholder="Search by Class Name" class="s1" id="s1"/>
       <div *ngFor = "let result of courseResult | paginate:{itemsPerPage:5,currentPage:p}" class="course">
+          <h3>Catalog Number:{{result.catalog_nbr}}</h3>
           <h3>Class Name: {{result.className}}</h3>
           <p><strong>Course Description:</strong> 
             {{result.catalog_description}}</p>
@@ -114,8 +125,8 @@
                     <th>Days</th>
                     <th>Instructors</th>
                     <th>Component</th>
-                    <th>Enrl_Stat</th>
-                    <th>Descr</th>
+                    <th>Enrollment Status</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -137,35 +148,3 @@
       <pagination-controls (pageChange)="p=$event"></pagination-controls>
   </div>
 </body>
-
-<!--<div class="search-container1">
-      <h2>Search by Subject</h2>
-      <form #searchidForm="ngForm" (ngSubmit)="searchidForm.valid && onSubmitID(searchidForm)">
-        <div class="search">
-          <label>Subject:</label><br>
-          <select name="subject" (change)="selectedChangeHandler($event)">
-            <option *ngFor="let x of subject" id="{{x.subject_id}}">
-              {{x.subject_value}}
-            </option>
-          </select><br>
-          <p><span>You selected:{{selectedSubject_id}}</span></p>
-        </div>
-        <div>
-          <button class="submit" type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-    <div class="result-container1">
-      <table>
-        <thead>
-            <tr>
-                <th>course_code_id</th>
-                <th>description</th>
-            </tr>
-        </thead>
-            <tr *ngFor = "let codes of _http.courseCodes">
-                <td>{{codes.course_code_id}}</td>
-                <td>{{codes.description}}</td>
-            </tr>
-    </table>
-    </div>-->

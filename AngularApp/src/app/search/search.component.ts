@@ -40,8 +40,7 @@ export class SearchComponent implements OnInit {
   public errorMsg: string;
   public successMsg: string;
 
-  selectedSubject: string = '';
-  selectedSubject_id: string = '';
+  selectedCourse:string = '';
 
   constructor(public _http:HttpService,
     public formBuilder:FormBuilder) { }
@@ -57,7 +56,8 @@ export class SearchComponent implements OnInit {
     days: new FormControl(this.daysArray,Validators.required),
     campus: new FormControl('Any', Validators.required),
     //enrl_stat: new FormControl('Not Full', Validators.required), 
-    component: new FormControl('All',Validators.required)
+    component: new FormControl('All',Validators.required),
+    course_number:new FormControl('')
   });
 
 
@@ -77,22 +77,10 @@ export class SearchComponent implements OnInit {
     })
   }
 
-  // event handler for the select element's change event
-  selectedChangeHandler (event : any){
-    // update the ui
-    this.selectedSubject = event.target.value;
-    for(var i=0; i<this.subject.length; i++){
-      if(this.subject[i].subject_value == this.selectedSubject){
-          this.selectedSubject_id = this.subject[i].subject_id;
-      }
-    }
-  }
-
-  onSubmitID(form : NgForm){
-    //console.log(this.selectedSubject_id);
-    this._http.getCourseCode(this.selectedSubject_id).subscribe((res) =>{
-      this._http.courseCodes = res as courseCode[];
-    });           
+  getCourse(name:string, event:any){
+    //console.log();
+    this.selectedCourse = `${event.target.value}`;
+    console.log(this.selectedCourse);
   }
 
   getSelected(name:string, event:any){
@@ -121,20 +109,22 @@ export class SearchComponent implements OnInit {
   onSubmit(){
     document.getElementById("s1").style.display ="inline";
     if(this.searchForm.value.subject=="All Subjects"){
-      this.searchForm.removeControl("subject");
+      this.searchForm.value.subject='';
     }
     if(this.searchForm.value.start_time=="All"){
-      this.searchForm.removeControl("start_time");
+      this.searchForm.value.start_time='';
     }
     if(this.searchForm.value.end_time=="All"){
-      this.searchForm.removeControl("end_time");
+      this.searchForm.value.end_time='';
     }
     if(this.searchForm.value.campus=="Any"){
-      this.searchForm.removeControl("campus");
+      this.searchForm.value.campus='';
     }
     if(this.searchForm.value.component=="All"){
-      this.searchForm.removeControl("component");
-    }
+      this.searchForm.value.component='';
+    } 
+    this.searchForm.value.course_number = this.selectedCourse;
+    console.log(this.searchForm.value.course_number);
     const body=JSON.stringify(this.searchForm.value);
     console.log(body);
     this._http.search(body).subscribe(res =>{
@@ -158,4 +148,3 @@ export class SearchComponent implements OnInit {
     }
   }
 }
-
