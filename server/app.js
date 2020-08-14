@@ -122,7 +122,9 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     }
     // search by all deault fields
     if(course_code == "" && subject!=""){
-        if(filters.campus!=""){
+        subjectsResp = timeTableJson.filter(obj => 
+        obj.subject.indexOf(filters.subject)!==-1)
+        if(subjectsResp.campus != undefined){
             subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
             &&
             obj.subject.indexOf(filters.subject)!==-1 &&
@@ -139,7 +141,6 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
             obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
             obj.course_info[0].ssr_component.indexOf(filters.component)!==-1)
             }
-       
    }
     // search by all fields and sunject and course_code must match
     if(subject!="" && course_code!=""){
