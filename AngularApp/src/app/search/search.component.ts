@@ -153,10 +153,10 @@ export class SearchComponent implements OnInit {
     this._http.search(body).subscribe(res =>{
       this._http.results = res as Result[];
       this.courseInfoResult =this._http.results;
-      console.log(this.courseInfoResult);
+      //console.log(this.courseInfoResult);
       this.resultLength =this.courseInfoResult['length'];
       this.resultLengthStr = this.resultLength + " Results";
-      console.log(this.resultLengthStr);
+      //console.log(this.resultLengthStr);
       this.courseResult = this.courseInfoResult['result'];
     })
   }
