@@ -103,14 +103,14 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
         // delivery_type: "LEC";
         component: defComponent,
         course_number:"",
-        enrl_stat: "Not full"
+        //enrl_stat: "Not full"
     }
 
     let filters = Object.assign({}, defaults, req.body);
     let checker = (arr, target) => target.some(v => arr.includes(v));
     
     var course_code= req.body.course_number;
-    console.log(course_code);
+    //console.log(course_code);
     var subject = req.body.subject;
    
     
@@ -122,15 +122,25 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     }
     // search by all deault fields
     if(course_code == "" && subject!=""){
-        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
-        &&
-        obj.subject.indexOf(filters.subject)!==-1 &&
-        obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
-        obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
-        obj.course_info[0].campus.indexOf(filters.campus)!==-1 &&
-        obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
-        obj.course_info[0].enrl_stat.indexOf(filters.enrl_stat)!==-1
-    )}
+        if(filters.campus!=""){
+            subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+            &&
+            obj.subject.indexOf(filters.subject)!==-1 &&
+            obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
+            obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
+            obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
+            obj.course_info[0].campus.indexOf(filters.campus)!==-1
+            )}
+            else{
+            subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+            &&
+            obj.subject.indexOf(filters.subject)!==-1 &&
+            obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
+            obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
+            obj.course_info[0].ssr_component.indexOf(filters.component)!==-1)
+            }
+       
+   }
     // search by all fields and sunject and course_code must match
     if(subject!="" && course_code!=""){
         var reg = new RegExp(course_code);
