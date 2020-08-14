@@ -38,4 +38,15 @@ export class HttpService {
     const config = { headers: new HttpHeaders().set('Content-Type','application/json') }
     return this.http.post<any>(`${this.rootURL}/getScheduleByAll`,body,config)
   }
+
+  addSearchInfo(searchInfo){
+    let mulsearchInfo = [];
+    if(localStorage.getItem('Courses')){
+      mulsearchInfo = JSON.parse(localStorage.getItem('Courses'));
+      mulsearchInfo = [searchInfo, ...mulsearchInfo];
+    }else{
+      mulsearchInfo = [searchInfo];
+    } 
+    localStorage.setItem('Courses',JSON.stringify(mulsearchInfo));
+  }
 }

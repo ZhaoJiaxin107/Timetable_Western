@@ -41,15 +41,18 @@ export class SearchComponent implements OnInit {
   public successMsg: string;
 
   selectedCourse:string = '';
-
+  searchForm: FormGroup;
+  searchInfo:any = {};
   constructor(public _http:HttpService,
     public formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.getTimetable();
+    this.createSearchForm();
   }
-  
-  searchForm = this.formBuilder.group({
+ 
+  createSearchForm(){
+  this.searchForm = this.formBuilder.group({
     subject: new FormControl('All Subjects', Validators.required),
     start_time: new FormControl('All', Validators.required),
     end_time: new FormControl('All', Validators.required),
@@ -59,6 +62,8 @@ export class SearchComponent implements OnInit {
     component: new FormControl('All',Validators.required),
     course_number:new FormControl('')
   });
+  }
+
 
 
   getTimetable(){
@@ -125,9 +130,22 @@ export class SearchComponent implements OnInit {
       this.searchForm.value.component='';
     } 
     this.searchForm.value.course_number = this.selectedCourse;
-    console.log(this.searchForm.value.course_number);
+   // console.log(this.searchForm.value.course_number);
+    this.save();
     this.getAll();
+    document.querySelector("#result").scrollIntoView();
+
   }
+
+  save(){
+    //console.log(this.searchForm.value);
+    this.searchInfo = Object.assign(this.searchInfo,this.searchForm.value);
+    //console.log(this.searchInfo);
+    //localStorage.setItem('Courses',JSON.stringify(this.searchInfo));
+    this._http.addSearchInfo(this.searchInfo);
+  }
+
+  
 
   getAll(){
     const body=JSON.stringify(this.searchForm.value);
@@ -144,7 +162,7 @@ export class SearchComponent implements OnInit {
   }
 
   Search(){
-    if(this.className !=""){
+    if(this.className!=""){
     this.courseResult = this.courseResult.filter(res =>{
       return res.className.toLocaleLowerCase().match(this.className.toLocaleLowerCase());
     });
