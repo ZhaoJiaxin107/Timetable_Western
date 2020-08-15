@@ -144,7 +144,7 @@ export class SearchComponent implements OnInit {
     this.searchForm.value.status = this.status;
     console.log(this.searchForm.value.status);
     //console.log(this.searchForm.value);
-    //this.save();
+    this.save();
     this.getAll();
     document.querySelector("#result").scrollIntoView();
 
