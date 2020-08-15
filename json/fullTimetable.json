@@ -2802,6 +2802,7 @@
           "start_time": "12:30 PM",
           "descrlong": "Prerequisite(s): High School Chemistry (Grade 11 Advanced Level or equivalent) or permission of the Dean, and registration in a Preliminary Year program at Brescia University College.",
           "end_time": "2:30 PM",
+          "campus": "",
           "facility_ID": "BR-18",
           "days": [
             "M"
@@ -2825,6 +2826,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "5:30 PM",
+          "campus": "",
           "facility_ID": "BR-202",
           "days": [
             "M"
@@ -6053,6 +6055,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "1:30 PM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "Tu"
@@ -6076,6 +6079,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "4:30 PM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "Tu"
@@ -6486,6 +6490,7 @@
           "start_time": "9:30 AM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "BR-MRW152",
           "days": [
             "M"
@@ -6509,6 +6514,7 @@
           "start_time": "9:30 AM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "BR-19",
           "days": [
             "M"
@@ -6532,6 +6538,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "M"
@@ -6555,6 +6562,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "M"
@@ -7318,6 +7326,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): High School Biology (Grade 11 Advanced Level or equivalent) and registration in the Preliminary Year Program at Brescia University College.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-201",
           "days": [
             "W"
@@ -7341,6 +7350,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): High School Biology (Grade 11 Advanced Level or equivalent), FN 0011 A/B and registration in the Preliminary Year Program at Brescia University College.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "W"
@@ -7364,6 +7374,7 @@
           "start_time": "2:30 PM",
           "descrlong": "",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "M"
@@ -7387,6 +7398,7 @@
           "start_time": "2:30 PM",
           "descrlong": "",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "M"
@@ -7410,6 +7422,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1070A/B or Foods and Nutrition 2070A/B or Foods and Nutrition 1030E or Foods and Nutrition 1021 or Foods and Nutrition 2121.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "W"
@@ -7433,6 +7446,7 @@
           "start_time": "8:30 AM",
           "descrlong": "",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "Tu"
@@ -7456,6 +7470,7 @@
           "start_time": "2:30 PM",
           "descrlong": "",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "M"
@@ -7479,6 +7494,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Registration in the Nutrition and Families or Management and Organizational Studies modules (Honours Specialization, Specialization, Major)",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "M"
@@ -7502,6 +7518,7 @@
           "start_time": "3:30 PM",
           "descrlong": "Pre-or Corequisite(s): Foods and Nutrition 1030 or Foods and Nutrition 1070A/B and Foods and Nutrition 1241A/B, Chemistry 2003A/B or Chemistry 2213A/B.",
           "end_time": "6:30 PM",
+          "campus":"",
           "facility_ID": "BR-303",
           "days": [
             "W"
@@ -7525,6 +7542,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1070A/B or Foods and Nutrition 1030E or Foods and Nutrition 1021 or Foods and Nutrition 2121.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-2001",
           "days": [
             "M"
@@ -7548,6 +7566,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1021 or Foods and Nutrition 1030E or Foods and Nutrition 2121; registration in the Nutrition and Families modules (Honours Specialization, Specialization, Major).",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "Th"
@@ -7571,6 +7590,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 2130, or Foods and Nutrition 2232.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-2001A",
           "days": [
             "Th"
@@ -7594,6 +7614,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1030E or Foods and Nutrition 1021 (with a mark of at least 70%) or Foods and Nutrition 2121 (with a mark of at least 70%). Recommended: Foods and Nutrition 3373A/B. Registration in the Foods and Nutrition modules (Honours Specialization, Specialization, Major, Minor).",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "HSB-40",
           "days": [
             "M",
@@ -7619,6 +7640,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Chemistry 2003A/B or Chemistry 2213A/B and Foods and Nutrition 2232.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-2001A",
           "days": [
             "Th"
@@ -7642,6 +7664,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Chemistry 2003A/B or Chemistry 2213A/B and Foods and Nutrition 2232.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-2001A",
           "days": [
             "Tu"
@@ -7665,6 +7688,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1030E and Foods and Nutrition 2241A/B or Foods and Nutrition 1070A/B and Foods and Nutrition 1241A/B, and Foods and Nutrition 2230A/B. Registration in the Honours Specialization in Nutrition and Dietetics module.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-135",
           "days": [
             "F"
@@ -7688,6 +7712,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 2449A/B.\n\nPre-or Corequisite(s): Foods and Nutrition 3342A/B.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "Th"
@@ -7711,6 +7736,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 2449A/B.\n\nPre-or Corequisite(s): Foods and Nutrition 3342A/B.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "W"
@@ -7734,6 +7760,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Foods and Nutrition 1030E and Foods and Nutrition 2241A/B or Foods and Nutrition 1070A/B and Foods and Nutrition 1241A/B, and Foods and Nutrition 2230A/B. Registration in the Honours Specialization in Nutrition and Dietetics.\n\nPre-or Corequisite(s): Foods & Nutrition 3344A/B.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-201",
           "days": [
             "W"
@@ -9241,6 +9268,7 @@
           "start_time": "11:30 AM",
           "descrlong": "",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-136",
           "days": [
             "Tu"
@@ -9264,6 +9292,7 @@
           "start_time": "12:30 PM",
           "descrlong": "Prerequisite(s): Registration in the Foods and Nutrition or Nutrition and Families modules (Honours Specialization, Specialization, Major).",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-204",
           "days": [
             "Th"
@@ -9287,6 +9316,7 @@
           "start_time": "12:30 PM",
           "descrlong": "Prerequisite(s): Registration in the Foods and Nutrition or Nutrition and Families modules (Honours Specialization, Specialization, Major).",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-204",
           "days": [
             "Th"
@@ -9310,6 +9340,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): Human Ecology 2222A/B or the former Human Ecology 2222F/G.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "Th"
@@ -9333,6 +9364,7 @@
           "start_time": "6:30 PM",
           "descrlong": "Prerequisite(s): Human Ecology 2222A/B or the former Human Ecology 2222F/G.",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-204",
           "days": [
             "M"
@@ -9356,6 +9388,7 @@
           "start_time": "6:00 PM",
           "descrlong": "Pre-or Corequisite(s): Human Ecology 2222A/B.",
           "end_time": "9:00 PM",
+          "campus":"",
           "facility_ID": "BR-302",
           "days": [
             "W"
@@ -9379,6 +9412,7 @@
           "start_time": "7:00 PM",
           "descrlong": "Prerequisite(s): Business Administration 1220E. Registration in the Foods and Nutrition modules (Honours Specialization, Specialization, Major).",
           "end_time": "10:00 PM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "Tu"
@@ -9402,6 +9436,7 @@
           "start_time": "4:30 PM",
           "descrlong": "Prerequisite(s): Business Administration 1220E. Registration in the Foods and Nutrition modules (Honours Specialization, Specialization, Major).",
           "end_time": "7:30 PM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "Tu"
@@ -9425,6 +9460,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Registration in the Foods and Nutrition modules (Honours Specialization).",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-MRW153",
           "days": [
             "Th"
@@ -9448,6 +9484,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Registration in the Foods and Nutrition modules (Honours Specialization).",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-2013",
           "days": [
             "M"
@@ -11261,6 +11298,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "4:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH250",
           "days": [
             "Tu"
@@ -11284,6 +11322,7 @@
           "start_time": "6:30 PM",
           "descrlong": "",
           "end_time": "9:30 PM",
+          "campus":"",
           "facility_ID": "BR-303",
           "days": [
             "Th"
@@ -11307,6 +11346,7 @@
           "start_time": "11:30 AM",
           "descrlong": "",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH250",
           "days": [
             "Th"
@@ -11330,6 +11370,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Registration in Foods and Nutrition programs or permission of the Division of Food and Nutritional Sciences.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-136",
           "days": [
             "Th"
@@ -11353,6 +11394,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Enrolment in the Diploma in Management Studies at Brescia University College.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-UH250",
           "days": [
             "M"
@@ -11376,6 +11418,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 1031, the former Dimensions of Leadership 1031 or permission of the department.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "F"
@@ -11399,6 +11442,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Leadership Studies 1031, the former Dimensions of Leadership 1031 or permission of the department.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-2013",
           "days": [
             "Th"
@@ -11422,6 +11466,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 1031.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-135",
           "days": [
             "Tu"
@@ -11445,6 +11490,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 2232A/B and Leadership Studies 2233A/B or the former Dimensions of Leadership 2232A/B and the former Dimensions of Leadership 2233A/B or permission of the department.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "W"
@@ -11468,6 +11514,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Leadership Studies 2232A/B and Leadership Studies 2233A/B or the former Dimensions of Leadership 2232A/B and the former Dimensions of Leadership 2233A/B or permission of the department.",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "Tu"
@@ -11491,6 +11538,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 2232A/B and Leadership Studies 2233A/B or the former Dimensions of Leadership 2232A/B and the former Dimensions of Leadership 2233A/B or permission of the department.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "M"
@@ -11514,6 +11562,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 3333A/B.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "M"
@@ -11537,6 +11586,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 3331F/G and Leadership Studies 3333F/G or the former Dimensions of Leadership 3331F/G and the former Dimensions of Leadership 3333A/B.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "Tu"
@@ -11560,6 +11610,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): Leadership Studies 4431F/G, the former Dimensions of Leadership 4431F/G or permission of the department.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-302A",
           "days": [
             "Tu"
@@ -12007,6 +12058,7 @@
           "start_time": "2:30 PM",
           "descrlong": "",
           "end_time": "5:30 PM",
+          "campus":"",
           "facility_ID": "BR-304",
           "days": [
             "W"
@@ -12172,6 +12224,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): Enrolment in BMOS.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-204",
           "days": [
             "F"
@@ -12243,6 +12296,7 @@
           "start_time": "2:30 PM",
           "descrlong": "Prerequisite(s): Enrolment in BMOS, the Diploma in Management Studies, Leadership Studies, or with permission of the instructor.",
           "end_time": "4:00 PM",
+          "campus":"",
           "facility_ID": "BR-2013",
           "days": [
             "Tu",
@@ -12315,6 +12369,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): 5.0 courses at University level, and enrollment in second year BMOS program.",
           "end_time": "10:00 AM",
+          "campus":"",
           "facility_ID": "BR-UH27",
           "days": [
             "Tu"
@@ -12362,6 +12417,7 @@
           "start_time": "10:00 AM",
           "descrlong": "Prerequisite(s): 5.0 courses at University level, and enrollment in second year BMOS program.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-UH27",
           "days": [
             "Tu"
@@ -12524,6 +12580,7 @@
           "start_time": "1:30 PM",
           "descrlong": "Prerequisite(s): One or more of Ontario Secondary School MCF3M, MCR3U, or equivalent.",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "Tu"
@@ -12596,6 +12653,7 @@
           "start_time": "1:30 PM",
           "descrlong": "Prerequisite(s): One or more of Ontario Secondary School MHF4U, MCR3U, Mathematics 0105A/B, Mathematics 0109A/B, or equivalent",
           "end_time": "2:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "M",
@@ -12750,6 +12808,7 @@
           "start_time": "11:30 AM",
           "descrlong": "Prerequisite(s): One or more of Ontario Secondary School MCF3M, MCR3U, Mathematics 0109A/B, or equivalent.",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "BR-203",
           "days": [
             "M",
@@ -14697,6 +14756,7 @@
           "start_time": "10:30 AM",
           "descrlong": "",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-201",
           "days": [
             "Tu"
@@ -15270,6 +15330,7 @@
           "descrlong": "",
           "end_time": "11:30 AM",
           "facility_ID": "BR-UH26",
+          "campus":"",
           "days": [
             "M"
           ],
@@ -15292,6 +15353,7 @@
           "start_time": "8:30 AM",
           "descrlong": "",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-UH26",
           "days": [
             "M"
@@ -15677,6 +15739,7 @@
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "3:30 PM",
           "facility_ID": "BR-14",
+          "campus":"",
           "days": [
             "M"
           ],
@@ -15700,6 +15763,7 @@
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "4:30 PM",
           "facility_ID": "BR-302A",
+          "campus":"",
           "days": [
             "M"
           ],
@@ -17385,6 +17449,7 @@
           "start_time": "10:30 AM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "BR-14",
           "days": [
             "M"
@@ -17408,6 +17473,7 @@
           "start_time": "10:30 AM",
           "descrlong": "Prerequisite(s): Registration in a Preliminary Year program at Brescia University College.",
           "end_time": "12:30 PM",
+          "campus":"",
           "facility_ID": "BR-UH252",
           "days": [
             "M"
@@ -17431,6 +17497,7 @@
           "start_time": "9:30 AM",
           "descrlong": "Prerequisite(s): registration in a Preliminary Year Program at Brescia University College and\nWriting 0005W/X or permission of the Department.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-MRW152",
           "days": [
             "Tu"
@@ -17454,6 +17521,7 @@
           "start_time": "9:30 AM",
           "descrlong": "Prerequisite(s): registration in a Preliminary Year Program at Brescia University College and\nWriting 0005W/X or permission of the Department.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-UH256",
           "days": [
             "Tu"
@@ -17527,6 +17595,7 @@
           "start_time": "9:30 AM",
           "descrlong": "Prerequisite(s): registration in a Preliminary Year Program at Brescia University College, and\nWriting 0010F/G or permission of the Department.",
           "end_time": "11:30 AM",
+          "campus":"",
           "facility_ID": "BR-303",
           "days": [
             "Tu"
@@ -17550,6 +17619,7 @@
           "start_time": "8:30 AM",
           "descrlong": "Prerequisite(s): registration in a Preliminary Year Program at Brescia University College, and\nWriting 0010F/G or permission of the Department.",
           "end_time": "10:30 AM",
+          "campus":"",
           "facility_ID": "BR-206",
           "days": [
             "Tu"
@@ -17669,6 +17739,7 @@
           "start_time": "10:30 AM",
           "descrlong": "",
           "end_time": "11:30 AM",
+          "campus": "",
           "facility_ID": "BR-MRW152",
           "days": [
             "W"
