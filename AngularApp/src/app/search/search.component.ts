@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpService } from '../http.service';
 import { TimeTable } from '../timetableSchema';
 import { Result } from '../result';
@@ -22,7 +22,8 @@ export class SearchComponent implements OnInit {
   design:any[];
   start_time:any[];
   end_time:any[];
-   
+  status: string = "";
+
   day = [
     { value:"Mon", key:"M" },
     { value:"Tue", key:"Tu"},
@@ -60,7 +61,8 @@ export class SearchComponent implements OnInit {
     campus: new FormControl('Any', Validators.required),
     //enrl_stat: new FormControl('Not Full', Validators.required), 
     component: new FormControl('All',Validators.required),
-    course_number:new FormControl('')
+    course_number:new FormControl(''),
+    status:new FormControl()
   });
   }
 
@@ -107,6 +109,15 @@ export class SearchComponent implements OnInit {
     this.searchForm.patchValue({days:this.daysArray})
   }
 
+  getStatus(event: any){
+    if(event.target.checked){
+      this.status = "Not full";
+    }else{
+      this.status = "";
+    }
+  }
+
+
   get f(){
     return this.searchForm.controls;
   }
@@ -130,8 +141,10 @@ export class SearchComponent implements OnInit {
       this.searchForm.value.component='';
     } 
     this.searchForm.value.course_number = this.selectedCourse;
-   // console.log(this.searchForm.value.course_number);
-    this.save();
+    this.searchForm.value.status = this.status;
+    console.log(this.searchForm.value.status);
+    //console.log(this.searchForm.value);
+    //this.save();
     this.getAll();
     document.querySelector("#result").scrollIntoView();
 

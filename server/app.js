@@ -112,15 +112,20 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     var course_code= req.body.course_number;
     //console.log(course_code);
     var subject = req.body.subject;
-   
+    var status = req.body.status;
     // search by course code
+    if(status == "Not full"){
+        subjectsResp = timeTableJson.filter(obj=>obj.course_info[0].enrl_stat == status)
+    }else{
+        subjectsResp = timeTableJson
+    }
     if(course_code!="" && subject==""){
         var reg = new RegExp(course_code);
-        subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg));
+        subjectsResp = subjectsResp.filter(obj => obj.catalog_nbr.match(reg));
     }
     // search by all deault fields
     if(course_code == "" && subject!=""){
-        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+        subjectsResp = subjectsResp.filter(obj => checker(obj.course_info[0].days, filters.days)
             &&
         obj.subject.indexOf(filters.subject)!==-1 &&
         obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
@@ -132,14 +137,14 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     // search by all fields and sunject and course_code must match
     if(subject!="" && course_code!=""){
         var reg = new RegExp(course_code);
-        subjectsResp = timeTableJson.filter(obj => obj.catalog_nbr.match(reg)
+        subjectsResp = subjectsResp.filter(obj => obj.catalog_nbr.match(reg)
             && obj.subject == subject
         );
     }
     // if search all of subjects
     if(subject=="" && course_code==""){
        
-        subjectsResp = timeTableJson.filter(obj => checker(obj.course_info[0].days, filters.days)
+        subjectsResp = subjectsResp.filter(obj => checker(obj.course_info[0].days, filters.days)
         &&
         obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
         obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
@@ -147,7 +152,7 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
         obj.course_info[0].campus.indexOf(filters.campus)!==-1
         )}
 
-  try {
+    try {
         res.json({ length: subjectsResp.length,
                         result: subjectsResp });
         } catch (err) {

@@ -113,7 +113,7 @@
                     
                       <div class="search-row">
                         <div class="column1">
-                          <input type="checkbox">Show only courses open for registration.
+                          <input type="checkbox" (change)="getStatus($event)">Show only courses open for registration.
                           <br>
                           *Note:may not be an accurate reflection during paper add/drop
                         </div>
