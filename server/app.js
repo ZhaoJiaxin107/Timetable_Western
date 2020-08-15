@@ -113,8 +113,6 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     //console.log(course_code);
     var subject = req.body.subject;
    
-    
-
     // search by course code
     if(course_code!="" && subject==""){
         var reg = new RegExp(course_code);

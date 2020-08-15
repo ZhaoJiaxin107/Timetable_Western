@@ -1,11 +1,55 @@
-.search {
-  /* border: 2px solid black; */
-  /* margin: 20px; */
+.search-row:after {
   padding: 10px;
+  margin-left:0px;
+	width: 100%;
+  padding-left:0px;
+  float:left;
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  padding-bottom:30px;
+  width: 150px;
+  text-align: right;
+}
+.column1 {
+  float: left;
+  padding-bottom:30px;
+  width: auto;
+}
+.column3{
+  float: left;
+  padding-bottom:30px;
+  margin-left: 26%;
+}
+.control{
+  float: left;
+  width: auto;
+  margin-left:10px;
+  margin-right: 120px;
+  padding-bottom:30px;
+}
+
+
+@media screen and (max-width:600px) {
+  .column,.column2 {
+    width: 100%;
+  }
+}
+
+.column2 {
+  float: left;
+  width: auto;
+  padding: 15px;
+}
+.control-label{
+  text-align:left;
 }
 
 h2{
-  margin-left: 5%;
+  margin-left: 10%;
   color: 	#696969;
 }
 select{
@@ -43,29 +87,10 @@ label{
   font-family: 'Microsoft YaHei';
 }
 
-/*.days{
-font-size: 16px;
-font-weight: normal;
-color:#2F4F4F;
-font-family: 'Microsoft YaHei';
-}*/
-.search{
-  margin-bottom: 2em;
-  width: auto;
-  height: 30px;
-}
 .colleft{
-  float: left;
   margin-left:15%;
-  margin-right: 10%;
 }
-.colright{
-  margin-left: 5%;
-  overflow: auto;
-}
-.row{
-  overflow: hidden;
-}
+
 #result{
   position: absolute;
   left: 4%;
@@ -75,9 +100,9 @@ font-family: 'Microsoft YaHei';
 }
 .course{
   margin-top: 3%;
+  display: block;
 }
 .submit{
-  margin-left:30%;
   width: 220px;  
   padding:12px;  
   background-color: #428bca;  
