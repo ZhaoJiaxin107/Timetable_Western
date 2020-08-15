@@ -113,12 +113,14 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     //console.log(course_code);
     var subject = req.body.subject;
     var status = req.body.status;
-    // search by course code
+    // filter course status not full
     if(status == "Not full"){
         subjectsResp = timeTableJson.filter(obj=>obj.course_info[0].enrl_stat == status)
     }else{
         subjectsResp = timeTableJson
     }
+
+    //search by course code
     if(course_code!="" && subject==""){
         var reg = new RegExp(course_code);
         subjectsResp = subjectsResp.filter(obj => obj.catalog_nbr.match(reg));

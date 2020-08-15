@@ -131,7 +131,9 @@ label{
   font-family:"Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB"," Microsoft Yahei",sans-serif;
   display: none;
 }
-
+.search-container{
+  height:auto;
+}
 .result-container{
   width:85%;
   margin-left:4%;
