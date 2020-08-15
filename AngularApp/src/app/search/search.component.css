@@ -32,7 +32,6 @@
   padding-bottom:30px;
 }
 
-
 @media screen and (max-width:600px) {
   .column,.column2 {
     width: 100%;
@@ -90,6 +89,8 @@ label{
 .colleft{
   margin-left:15%;
 }
+
+
 
 #result{
   position: absolute;

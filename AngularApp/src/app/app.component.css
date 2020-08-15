@@ -35,7 +35,10 @@ p{
     text-align: center;
     font-size: 1.2em;
 }
-.footer{
+.content{
+    padding-bottom: 50px;
+}
+footer{
     background-color: #8845A3;
     height:190px;
     width: 100%;
