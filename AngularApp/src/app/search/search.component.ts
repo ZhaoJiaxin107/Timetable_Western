@@ -6,7 +6,6 @@ import { Search } from '../search';
 import { NgForm, FormControl,FormBuilder,Validators,FormGroup,FormArray } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { throwError } from 'rxjs';
-import { courseCode } from '../coursecode';
 import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-search',
@@ -85,13 +84,11 @@ export class SearchComponent implements OnInit {
   }
 
   getCourse(name:string, event:any){
-    //console.log();
     this.selectedCourse = `${event.target.value}`;
     console.log(this.selectedCourse);
   }
 
   getSelected(name:string, event:any){
-    //console.log();
     var string = `${event.target.value}`;
     console.log(`${name}:${string}`);
   }
@@ -142,7 +139,7 @@ export class SearchComponent implements OnInit {
     } 
     this.searchForm.value.course_number = this.selectedCourse;
     this.searchForm.value.status = this.status;
-    console.log(this.searchForm.value.status);
+    //console.log(this.searchForm.value.status);
     //console.log(this.searchForm.value);
     this.save();
     this.getAll();
@@ -153,16 +150,13 @@ export class SearchComponent implements OnInit {
   save(){
     //console.log(this.searchForm.value);
     this.searchInfo = Object.assign(this.searchInfo,this.searchForm.value);
-    //console.log(this.searchInfo);
     //localStorage.setItem('Courses',JSON.stringify(this.searchInfo));
     this._http.addSearchInfo(this.searchInfo);
   }
 
-  
-
   getAll(){
     const body=JSON.stringify(this.searchForm.value);
-    console.log(body);
+    //console.log(body);
     this._http.search(body).subscribe(res =>{
       this._http.results = res as Result[];
       this.courseInfoResult =this._http.results;
