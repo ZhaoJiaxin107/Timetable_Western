@@ -103,7 +103,7 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
         // delivery_type: "LEC";
         component: defComponent,
         course_number:"",
-        //enrl_stat: "Not full"
+        status:""
     }
 
     let filters = Object.assign({}, defaults, req.body);
