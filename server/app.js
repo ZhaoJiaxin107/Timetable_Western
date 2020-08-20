@@ -91,8 +91,8 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
 
     var reg = new RegExp(course_code);
     subjectsResp = subjectsResp.filter(obj => obj.catalog_nbr.match(reg) && 
-        obj.subject.indexOf(filters.subject)!=-1 &&
         checker(obj.course_info[0].days, filters.days) &&
+        obj.subject.indexOf(filters.subject)!=-1 &&
         obj.course_info[0].start_time.toLowerCase().indexOf(filters.start_time) !==-1 &&
         obj.course_info[0].end_time.toLowerCase().indexOf(filters.end_time)!==-1 &&
         obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
