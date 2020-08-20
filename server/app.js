@@ -48,36 +48,6 @@ app.get('/timetable/getCourseCode/:subject_id', function (req, res) {
 })
 
 
-app.get('/timetable/getSchedule/:course_code', function (req, res) {
-    var course_code = String(req.params.course_number);
-    var reg = new RegExp(course_code);
-    let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
-    //console.log(course);
-    try {
-        res.json({ length: course.length,
-                    result: course });
-    } catch (err) {
-        res.json({ message: err });
-    }
-})
-
-
-app.post('/timetable/getScheduleCourseCode', function (req, res) {
-
-    var course_code= req.body.course_number;
-    console.log(course_code);
-    var reg = new RegExp(course_code);
-    let course = timeTableJson.filter(course => course.catalog_nbr.match(reg));
-    //console.log(course);
-    try {
-        res.json({ length: course.length,
-                    result: course });
-    } catch (err) {
-        res.json({ message: err });
-    }
-})
-
-
 app.post('/timetable/getScheduleByAll', (req, res) => {
     //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
     let defSubjects = []
