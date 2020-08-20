@@ -129,9 +129,6 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
         obj.course_info[0].ssr_component.indexOf(filters.component)!==-1 &&
         obj.course_info[0].campus.indexOf(filters.campus)!==-1
     );
-    
-   
-
     try {
         res.json({ length: subjectsResp.length,
                         result: subjectsResp });
