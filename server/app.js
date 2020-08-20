@@ -79,10 +79,9 @@ app.post('/timetable/getScheduleByAll', (req, res) => {
     let filters = Object.assign({}, defaults, req.body);
     let checker = (arr, target) => target.some(v => arr.includes(v));
     
-    var course_code= req.body.course_number;
+    var course_code= filters.course_number;
     //console.log(course_code);
-    var subject = req.body.subject;
-    var status = req.body.status;
+    var status = filters.status;
     // filter course status not full
     if(status == "Not full"){
         subjectsResp = timeTableJson.filter(obj=>obj.course_info[0].enrl_stat == status)
