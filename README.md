@@ -30,9 +30,9 @@ When you download this repository from github there may be something wrong when 
 ### Result for western timetable
 #### 1.Index Page
 ![Image text](https://github.com/ZhaoJiaxin107/Timetable_Western/blob/main/IndexPage.png)
-#### 2.SearchPanel
+#### 2.Search Panel
 ![Image text](https://github.com/ZhaoJiaxin107/Timetable_Western/blob/main/SearchPanel.png)
-#### 3.ResultPanel
+#### 3.Result Panel
 ![Image text](https://github.com/ZhaoJiaxin107/Timetable_Western/blob/main/ResultPanel.png)
 #### 4.Pagination
 ![Image text](https://github.com/ZhaoJiaxin107/Timetable_Western/blob/main/Pagination.png)
