@@ -16,7 +16,7 @@ git clone https://github.com/ZhaoJiaxin107/Timetable_Western.git Jiaxin Branch, 
 This repository consists of the back-end code and JSON file. The user can follow the instructions in this report to setup the back-end and server on their own system. The user should make sure to install all the dependencies before running the server as discussed in this report before. 
 
 The front-end code for running this project on your local computer can also be installed from my github repository by using the following command in your local github repository:
-git clone https://github.com/ZhaoJiaxin107/Timetable_Western.git Jiaxin Branch, not master branch because Yiyun and I use Angular to implement the front-end.
+git clone https://github.com/ZhaoJiaxin107/Timetable_Western.git Jiaxin Branch.
 
 In order to run this code make sure you have installed node.js and Angular CLI on your system. Also, when running this application, please make sure back-end port is listening by entering nodemon/node server.js in terminal and front-end is running by entering ng serve in terminal. Finally, open your browser and enter localhost:4200. Preferably use Google Chrome. What should be noted is that every time you search for a new course, the page should be turned into the first page.  
 
